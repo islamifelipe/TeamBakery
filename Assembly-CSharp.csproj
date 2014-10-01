@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Attack1.cs" />
-     <Compile Include="Assets\BobOmbBehaviour.cs" />
+     <Compile Include="Assets\CupCakeAI.cs" />
      <Compile Include="Assets\PlayerController.cs" />
      <Compile Include="Assets\ProCore\Prototype\Scripts\RebuildMeshOnWake.cs" />
      <None Include="Assets\ProCore\Prototype\About\changelog.txt" />

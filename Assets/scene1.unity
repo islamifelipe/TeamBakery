@@ -343,7 +343,7 @@ GameObject:
   - 61: {fileID: 843331872}
   - 114: {fileID: 843331877}
   m_Layer: 0
-  m_Name: Bob-Omb
+  m_Name: CupCake
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -358,8 +358,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: 4a3e8123c1825b54286084c42e75aed8, type: 2}
   m_IsTrigger: 0
-  m_Size: {x: .170000002, y: .200000003}
-  m_Center: {x: 0, y: .100000001}
+  m_Size: {x: .680000007, y: 1.10000002}
+  m_Center: {x: -.0599999987, y: -.100000001}
 --- !u!50 &843331873
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -410,7 +410,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: 1aaf5a63fc1ca2144a979a03734bd82a, type: 3}
+  m_Sprite: {fileID: 21300026, guid: 48e9891dddc0455448a02c9afca52370, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &843331876
 Transform:
@@ -419,8 +419,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 843331871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: 6, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalPosition: {x: 5.34065819, y: 4.41757727, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -435,8 +435,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd11fab8bd7c384aa9638655b789e7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  area: 4
+  speed: 10
+  area: 3
 --- !u!1001 &1322611685
 Prefab:
   m_ObjectHideFlags: 0
