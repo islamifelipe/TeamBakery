@@ -85,7 +85,7 @@ GameObject:
   - 58: {fileID: 24642698}
   - 114: {fileID: 24642700}
   m_Layer: 0
-  m_Name: AttackCollision
+  m_Name: attackCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,8 +125,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b9789ca54ead9f41a47e844b4d8367a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: {fileID: 675905004}
+  chef: {fileID: 675905004}
+  damage: 10
   teste: 0
+--- !u!1 &38729140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 38729141}
+  - 212: {fileID: 38729142}
+  - 114: {fileID: 38729143}
+  m_Layer: 0
+  m_Name: weaponHUD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &38729141
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 38729140}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.5999999, y: 10, z: 0}
+  m_LocalScale: {x: .600000024, y: .600000024, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!212 &38729142
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 38729140}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 824b21e0178914c4b95f05cd11e359de, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &38729143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 38729140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a89e995faea5fa74f85d44dc55763cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xPos: 5
+  yPos: 4
+  cam: {fileID: 1589256759}
+  weapon1: {fileID: 21300002, guid: 49f8d581621713f45b593651bc5053f5, type: 3}
+  weapon2: {fileID: 21300002, guid: 1aaf5a63fc1ca2144a979a03734bd82a, type: 3}
 --- !u!1 &639654421
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,7 +207,7 @@ GameObject:
   - 61: {fileID: 639654423}
   - 50: {fileID: 639654422}
   m_Layer: 0
-  m_Name: ground1transp
+  m_Name: floor
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,7 +272,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &675905003
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +287,7 @@ GameObject:
   - 50: {fileID: 675905005}
   - 114: {fileID: 675905004}
   m_Layer: 0
-  m_Name: Chef
+  m_Name: chef
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -274,7 +342,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .899999976, y: 1.04999995}
+  m_Size: {x: .899999976, y: 1.10000002}
   m_Center: {x: 0, y: -.100000001}
 --- !u!95 &675905007
 Animator:
@@ -342,8 +410,9 @@ GameObject:
   - 50: {fileID: 843331873}
   - 61: {fileID: 843331872}
   - 114: {fileID: 843331877}
+  - 114: {fileID: 843331878}
   m_Layer: 0
-  m_Name: CupCake
+  m_Name: cupcake
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -423,7 +492,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!114 &843331877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,8 +504,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd11fab8bd7c384aa9638655b789e7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  area: 3
+  speed: 3
+  area: 2
+--- !u!114 &843331878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 843331871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a5beedce6c3f74faf07fcb6ae91ac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
 --- !u!1001 &1322611685
 Prefab:
   m_ObjectHideFlags: 0
@@ -478,7 +559,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 09e396f8258262a499d187c95a4ea649, type: 2}
       propertyPath: m_Name
-      value: Chef
+      value: chef
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 09e396f8258262a499d187c95a4ea649, type: 2}
       propertyPath: m_LocalScale.x
@@ -503,7 +584,7 @@ Prefab:
         type: 3}
     - target: {fileID: 6100000, guid: 09e396f8258262a499d187c95a4ea649, type: 2}
       propertyPath: m_Size.y
-      value: 1.04999995
+      value: 1.10000002
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: 09e396f8258262a499d187c95a4ea649, type: 2}
       propertyPath: m_Center.y
@@ -511,7 +592,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 09e396f8258262a499d187c95a4ea649, type: 2}
       propertyPath: m_Name
-      value: MainCam
+      value: mainCam
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 09e396f8258262a499d187c95a4ea649, type: 2}
@@ -531,7 +612,7 @@ GameObject:
   - 124: {fileID: 1589256762}
   - 81: {fileID: 1589256761}
   m_Layer: 0
-  m_Name: MainCam
+  m_Name: mainCam
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

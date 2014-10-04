@@ -20,7 +20,6 @@ public class CupCakeAI : MonoBehaviour {
 		if (this.transform.position.x > initPos + area) {
 			right = true;
 			transform.localScale = new Vector3 (-initialScale.x, initialScale.y, initialScale.z);
-
 		}
 		else if (this.transform.position.x < initPos - area) {
 			right = false;

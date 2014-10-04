@@ -2,14 +2,15 @@
 using System.Collections;
 
 public class Attack1 : MonoBehaviour {
-	public PlayerController attack;
+	public PlayerController chef;
+	public int damage;
 	public bool teste;
 
 	// Use this for initialization
 	void OnTriggerEnter2D(Collider2D col){
-		if (attack.attack){
-			Destroy (col.gameObject);
-			print ("DED");
+		if (chef.attack && col.gameObject.tag == "Enemy") {
+			col.GetComponent<enemyHealth>().health -= damage;
+			print ("ATTACK");
 		}
 	}
 
