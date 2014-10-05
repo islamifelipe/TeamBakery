@@ -1,17 +1,19 @@
-using UnityEngine;
+using UnityEngine;	
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
 	public float maxHorSpeed, jumpStrenght, sprintBonus, maxSprintSpeed, sprintFadeSpeed, bounceTest;
-	public float horDeacc, horAcc;
+	public float horDeacc, horAcc, shakeIntensity;
 	public bool attack;
+	public int camShake;
 	public Vector3 initialScale;
 	public Animator PCAnim;
 	private float horSpeed, verSpeed, colliderCenter, colliderSize;
 	private int attackType;
 	private bool duck, flip, jump;
 	private BoxCollider2D chefCollider;
+	private GameObject cam;
 
 	// Use this for initialization
 	void Start(){
@@ -21,14 +23,14 @@ public class PlayerController : MonoBehaviour {
 		colliderSize = chefCollider.size.y;
 		colliderCenter = chefCollider.center.y;
 		attackType = 1;
+		camShake = 0;
 	}
 
 	void OnCollisionEnter2D(Collision2D col){
-		if(col.gameObject.tag == "Obstacle" && col.gameObject.transform.position.y < this.transform.position.y) jump = true;
-		if(col.gameObject.tag == "Enemy") {
-			(GameObject.Find ("mainCam")).transform.parent = null;
-			Destroy (gameObject);
-			Destroy (GameObject.Find ("weaponHUD"));
+		print (col.gameObject.tag);
+
+		if (col.gameObject.tag == "jumpSurface") {
+				jump = true;
 		}
 	}
 
@@ -37,11 +39,22 @@ public class PlayerController : MonoBehaviour {
 		duck = false;
 		flip = false;
 		attack = false;
-
 		if(Mathf.Abs (horSpeed) < horDeacc) horSpeed = 0;
 		if(horSpeed > 0) horSpeed -= horDeacc;
 		else if(horSpeed < 0) horSpeed += horDeacc;
 		verSpeed = rigidbody2D.velocity.y;
+		
+		if (camShake == 1 || camShake == 2 || camShake == 5 || camShake == 6) {
+				cam = GameObject.Find ("mainCam");
+				cam.transform.position = new Vector3 (cam.transform.position.x, cam.transform.position.y + shakeIntensity, cam.transform.position.z);
+				camShake++;
+		}
+		else if (camShake == 3 || camShake == 4) {
+				cam = GameObject.Find ("mainCam");
+				cam.transform.position = new Vector3 (cam.transform.position.x, cam.transform.position.y - shakeIntensity * 2, cam.transform.position.z);
+				camShake++;		
+		}
+		else if (camShake == 7) camShake = 0;
 
 		if (Input.GetKeyDown(KeyCode.Q)) {
 			if(attackType == 1) attackType = 2;
@@ -77,12 +90,11 @@ public class PlayerController : MonoBehaviour {
 			}
 			transform.localScale = new Vector3(-initialScale.x, initialScale.y, initialScale.z);
 		}
-		if(Input.GetAxis("Jump") > 0 && verSpeed < 0.2 && jump && !duck){ // Salto
+		if(Input.GetAxis("Jump") > 0 && verSpeed < 0.2 && !duck && jump){ // Salto
 			jump = false;
 			verSpeed = jumpStrenght;
 			rigidbody2D.AddForce(new Vector2(0, jumpStrenght));
 		}
-
 		PCAnim.SetFloat ("horSpeed", Mathf.Abs(horSpeed));
 		PCAnim.SetFloat ("verSpeed", Mathf.Abs(verSpeed));
 		PCAnim.SetBool ("duck", duck);
@@ -90,28 +102,5 @@ public class PlayerController : MonoBehaviour {
 		PCAnim.SetBool ("attack", attack);
 		PCAnim.SetInteger ("attackType", attackType);
 		rigidbody2D.velocity = new Vector2 (horSpeed, rigidbody2D.velocity.y);
-
-		/*
-		// OLD CODE
-		if(Input.GetKey (KeyCode.DownArrow)) duck = true;
-		if(Input.GetKey(KeyCode.RightArrow)&& duck == false){ // Andar para a direita
-			horSpeed = maxVerSpeed;
-			if(Input.GetKey(KeyCode.LeftShift)) horSpeed *= sprintBonus; // Sprint
-			transform.localScale = initialScale;
-		}
-		else if(Input.GetKey (KeyCode.LeftArrow) && duck == false){ // Andar para a esquerda
-			horSpeed = -maxVerSpeed;
-			if(Input.GetKey(KeyCode.LeftShift)) horSpeed *= sprintBonus; // Sprint
-			transform.localScale = new Vector3(-initialScale.x, initialScale.y, initialScale.z);
-		}
-		if(Input.GetKey (KeyCode.UpArrow) && verSpeed == 0 && duck == false){ // Salto
-			verSpeed = jumpStrenght;
-			rigidbody2D.AddForce(new Vector2(0, jumpStrenght));
-		}
-		PCAnim.SetFloat ("horSpeed", Mathf.Abs(horSpeed));
-		PCAnim.SetFloat ("verSpeed", Mathf.Abs(verSpeed));
-		PCAnim.SetBool ("duck", duck);
-		rigidbody2D.velocity = new Vector2 (horSpeed, rigidbody2D.velocity.y);
-		*/
 	}
 }
