@@ -5,7 +5,7 @@ public class CupCakeAI : MonoBehaviour {
 
 	public float speed, area;
 	private float initPos;
-	private bool right;
+	public bool right;
 	private Vector3 initialScale;
 
 	// Use this for initialization

@@ -6,11 +6,10 @@ public class PlayerController : MonoBehaviour {
 	public float maxHorSpeed, jumpStrenght, sprintBonus, maxSprintSpeed, sprintFadeSpeed, bounceTest;
 	public float horDeacc, horAcc, shakeIntensity;
 	public bool attack;
-	public int camShake;
+	public int camShake, weaponChoice;
 	public Vector3 initialScale;
 	public Animator PCAnim;
 	private float horSpeed, verSpeed, colliderCenter, colliderSize;
-	private int attackType;
 	private bool duck, flip, jump;
 	private BoxCollider2D chefCollider;
 	private GameObject cam;
@@ -22,7 +21,7 @@ public class PlayerController : MonoBehaviour {
 		chefCollider = collider2D as BoxCollider2D;
 		colliderSize = chefCollider.size.y;
 		colliderCenter = chefCollider.center.y;
-		attackType = 1;
+		weaponChoice = 0;
 		camShake = 0;
 	}
 
@@ -57,8 +56,8 @@ public class PlayerController : MonoBehaviour {
 		else if (camShake == 7) camShake = 0;
 
 		if (Input.GetKeyDown(KeyCode.Q)) {
-			if(attackType == 1) attackType = 2;
-			else attackType = 1;
+			if(weaponChoice == 0) weaponChoice = 1;
+			else weaponChoice = 0;
 		}
 		if (Input.GetKey (KeyCode.DownArrow)) {
 			duck = true;
@@ -100,7 +99,7 @@ public class PlayerController : MonoBehaviour {
 		PCAnim.SetBool ("duck", duck);
 		PCAnim.SetBool ("flip", flip);
 		PCAnim.SetBool ("attack", attack);
-		PCAnim.SetInteger ("attackType", attackType);
+		PCAnim.SetInteger ("attackType", weaponChoice);
 		rigidbody2D.velocity = new Vector2 (horSpeed, rigidbody2D.velocity.y);
 	}
 }

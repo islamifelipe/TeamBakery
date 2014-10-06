@@ -53,7 +53,10 @@
      <Compile Include="Assets\CupCakeAI.cs" />
      <Compile Include="Assets\HUD.cs" />
      <Compile Include="Assets\ProCore\Prototype\Scripts\RebuildMeshOnWake.cs" />
+     <Compile Include="Assets\UpdateHealthHUD.cs" />
+     <Compile Include="Assets\WeaponHUD.cs" />
      <Compile Include="Assets\enemyInfo.cs" />
+     <Compile Include="Assets\uptEnemyHealthHUD.cs" />
      <None Include="Assets\ProCore\Prototype\About\changelog.txt" />
      <None Include="Assets\ProCore\Prototype\Shader\VertexBillboard.shader" />
      <None Include="Assets\ProCore\Prototype\Shader\DiffuseVertexColor.shader" />
