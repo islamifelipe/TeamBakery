@@ -310,6 +310,7 @@ GameObject:
   - 50: {fileID: 675905005}
   - 114: {fileID: 675905004}
   - 114: {fileID: 675905010}
+  - 82: {fileID: 675905011}
   m_Layer: 0
   m_Name: chef
   m_TagString: Player
@@ -329,6 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 325a5b611850ac04a8a2925c867b87bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teste: {fileID: 8300000, guid: 1429ba6842657e14db43832b03cb73d6, type: 3}
   maxHorSpeed: 10
   jumpStrenght: 500
   sprintBonus: 3
@@ -337,7 +339,7 @@ MonoBehaviour:
   bounceTest: 400
   horDeacc: .400000006
   horAcc: .5
-  shakeIntensity: .200000003
+  shakeIntensity: 2
   attack: 0
   camShake: 0
   weaponChoice: 0
@@ -436,6 +438,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+--- !u!82 &675905011
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 675905003}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 1429ba6842657e14db43832b03cb73d6, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &740798005
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,8 +701,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28a5beedce6c3f74faf07fcb6ae91ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 30
-  damage: 30
+  health: 300
+  damage: 2
   horKnockback: 10000
   verKnockback: 0
 --- !u!1 &1104552577
@@ -671,8 +731,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .100000001, y: .899999976, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children:
-  - {fileID: 2018919269}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
 --- !u!132 &1104552579
@@ -695,7 +754,7 @@ GUIText:
   m_FontStyle: 1
   m_Color:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 4278190080
   m_PixelCorrect: 1
   m_RichText: 1
 --- !u!114 &1104552580
@@ -843,12 +902,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 09e396f8258262a499d187c95a4ea649, type: 2}
       propertyPath: shakeIntensity
-      value: .200000003
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 09e396f8258262a499d187c95a4ea649, type: 2}
       propertyPath: m_LocalPosition.z
       value: -10
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 09e396f8258262a499d187c95a4ea649, type: 2}
+      propertyPath: jumpStrenght
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 09e396f8258262a499d187c95a4ea649, type: 2}
+      propertyPath: teste
+      value: 
+      objectReference: {fileID: 8300000, guid: 1429ba6842657e14db43832b03cb73d6, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 09e396f8258262a499d187c95a4ea649, type: 2}
   m_RootGameObject: {fileID: 675905003}
@@ -1009,50 +1076,3 @@ MonoBehaviour:
   chefController: {fileID: 675905004}
   hud2: {fileID: 553284206}
   hud3: {fileID: 1241284090}
---- !u!1 &2018919267
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 2018919269}
-  - 131: {fileID: 2018919268}
-  m_Layer: 0
-  m_Name: HealthTexture
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!131 &2018919268
-GUITexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2018919267}
-  m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: 824b21e0178914c4b95f05cd11e359de, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: .501960814}
-  m_PixelInset:
-    serializedVersion: 2
-    x: -64
-    y: -29
-    width: 128
-    height: 58
-  m_LeftBorder: 0
-  m_RightBorder: 0
-  m_TopBorder: 0
-  m_BottomBorder: 0
---- !u!4 &2018919269
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2018919267}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0199999996, y: -.00999999978, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1104552578}
-  m_RootOrder: 0
