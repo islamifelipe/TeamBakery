@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{81A0FC67-0787-3D5B-0EBB-A1A4D09A0041}</ProjectGuid>
+	<ProjectGuid>{88A07CD3-8C35-75C5-34DC-58E59C7B4CF8}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -75,19 +75,19 @@
      <None Include="Assets\ProCore\Prototype\Shader\DiffuseVertexColorEmission.shader" />
      <None Include="Assets\ProCore\Prototype\About\Credits.txt" />
  <Reference Include="ProBuilderCore">
- <HintPath>C:/Users/Vinícius/Documents/GitHub/TeamBakery/Assets/ProCore/Prototype/Classes/ProBuilderCore.dll</HintPath>
+ <HintPath>C:/Meus Arquivos/FromGarrafaToAll/TeamBakery-master/Assets/ProCore/Prototype/Classes/ProBuilderCore.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderMeshOps">
- <HintPath>C:/Users/Vinícius/Documents/GitHub/TeamBakery/Assets/ProCore/Prototype/Classes/ProBuilderMeshOps.dll</HintPath>
+ <HintPath>C:/Meus Arquivos/FromGarrafaToAll/TeamBakery-master/Assets/ProCore/Prototype/Classes/ProBuilderMeshOps.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderEditor">
- <HintPath>C:/Users/Vinícius/Documents/GitHub/TeamBakery/Assets/ProCore/Prototype/Editor/ProBuilderEditor.dll</HintPath>
+ <HintPath>C:/Meus Arquivos/FromGarrafaToAll/TeamBakery-master/Assets/ProCore/Prototype/Editor/ProBuilderEditor.dll</HintPath>
  </Reference>
  <Reference Include="ProCore">
- <HintPath>C:/Users/Vinícius/Documents/GitHub/TeamBakery/Assets/ProCore/Shared/Code/ProCore.dll</HintPath>
+ <HintPath>C:/Meus Arquivos/FromGarrafaToAll/TeamBakery-master/Assets/ProCore/Shared/Code/ProCore.dll</HintPath>
  </Reference>
  <Reference Include="SixBySeven">
- <HintPath>C:/Users/Vinícius/Documents/GitHub/TeamBakery/Assets/ProCore/Shared/Code/SixBySeven.dll</HintPath>
+ <HintPath>C:/Meus Arquivos/FromGarrafaToAll/TeamBakery-master/Assets/ProCore/Shared/Code/SixBySeven.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -95,7 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-vs.csproj">
-      <Project>{5B3ACA24-66F0-1D81-B56B-D59B207B3D89}</Project>      <Name>Assembly-CSharp-vs</Name>    </ProjectReference>
+      <Project>{DAA16F74-A2AD-5B45-BE10-464B31820390}</Project>      <Name>Assembly-CSharp-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

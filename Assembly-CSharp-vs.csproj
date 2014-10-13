@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{5B3ACA24-66F0-1D81-B56B-D59B207B3D89}</ProjectGuid>
+	<ProjectGuid>{DAA16F74-A2AD-5B45-BE10-464B31820390}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -46,17 +46,28 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Attack1.cs" />
-     <Compile Include="Assets\BobOmbBehaviour.cs" />
-     <Compile Include="Assets\Chef\PCInfo.cs" />
-     <Compile Include="Assets\Chef\PlayerController.cs" />
-     <Compile Include="Assets\CupCakeAI.cs" />
-     <Compile Include="Assets\HUD.cs" />
+     <Compile Include="Assets\Background\HUD.cs" />
+     <Compile Include="Assets\Background\movingCloud.cs" />
+     <Compile Include="Assets\Background\parallax.cs" />
+     <Compile Include="Assets\Enemies\BobOmbBehaviour.cs" />
+     <Compile Include="Assets\Enemies\CupCakeAI.cs" />
+     <Compile Include="Assets\Enemies\Cupcake\doughnutIA.cs" />
+     <Compile Include="Assets\Enemies\Cupcake\enemySight.cs" />
+     <Compile Include="Assets\Enemies\doughnutIA2.cs" />
+     <Compile Include="Assets\Enemies\enemyInfo.cs" />
+     <Compile Include="Assets\Enemies\toasterAttack.cs" />
+     <Compile Include="Assets\HUD\UpdateHealthHUD.cs" />
+     <Compile Include="Assets\HUD\UptBar.cs" />
+     <Compile Include="Assets\HUD\WeaponHUD.cs" />
+     <Compile Include="Assets\HUD\uptEnemyHealthHUD.cs" />
+     <Compile Include="Assets\JumpThrough.cs" />
+     <Compile Include="Assets\PC\Attack1.cs" />
+     <Compile Include="Assets\PC\PCInfo.cs" />
+     <Compile Include="Assets\PC\PlayerController.cs" />
      <Compile Include="Assets\ProCore\Prototype\Scripts\RebuildMeshOnWake.cs" />
-     <Compile Include="Assets\UpdateHealthHUD.cs" />
-     <Compile Include="Assets\WeaponHUD.cs" />
-     <Compile Include="Assets\enemyInfo.cs" />
-     <Compile Include="Assets\uptEnemyHealthHUD.cs" />
+     <Compile Include="Assets\Projetil.cs" />
+     <Compile Include="Assets\projInfo.cs" />
+     <Compile Include="Assets\projectile.cs" />
      <None Include="Assets\ProCore\Prototype\About\changelog.txt" />
      <None Include="Assets\ProCore\Prototype\Shader\VertexBillboard.shader" />
      <None Include="Assets\ProCore\Prototype\Shader\DiffuseVertexColor.shader" />
@@ -68,16 +79,16 @@
      <None Include="Assets\ProCore\Prototype\Shader\DiffuseVertexColorEmission.shader" />
      <None Include="Assets\ProCore\Prototype\About\Credits.txt" />
  <Reference Include="ProBuilderCore">
- <HintPath>C:/Users/Vinícius/Documents/GitHub/TeamBakery/Assets/ProCore/Prototype/Classes/ProBuilderCore.dll</HintPath>
+ <HintPath>C:/Meus Arquivos/FromGarrafaToAll/TeamBakery-master/Assets/ProCore/Prototype/Classes/ProBuilderCore.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderMeshOps">
- <HintPath>C:/Users/Vinícius/Documents/GitHub/TeamBakery/Assets/ProCore/Prototype/Classes/ProBuilderMeshOps.dll</HintPath>
+ <HintPath>C:/Meus Arquivos/FromGarrafaToAll/TeamBakery-master/Assets/ProCore/Prototype/Classes/ProBuilderMeshOps.dll</HintPath>
  </Reference>
  <Reference Include="ProCore">
- <HintPath>C:/Users/Vinícius/Documents/GitHub/TeamBakery/Assets/ProCore/Shared/Code/ProCore.dll</HintPath>
+ <HintPath>C:/Meus Arquivos/FromGarrafaToAll/TeamBakery-master/Assets/ProCore/Shared/Code/ProCore.dll</HintPath>
  </Reference>
  <Reference Include="SixBySeven">
- <HintPath>C:/Users/Vinícius/Documents/GitHub/TeamBakery/Assets/ProCore/Shared/Code/SixBySeven.dll</HintPath>
+ <HintPath>C:/Meus Arquivos/FromGarrafaToAll/TeamBakery-master/Assets/ProCore/Shared/Code/SixBySeven.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
