@@ -10,7 +10,8 @@ public class projInfo : MonoBehaviour {
 	void Start () {
 	}
 
-	void OnTriggerCollision2D(Collider2D col){
+	void OnTriggerEnter2D(Collider2D col){
+		print("RANGED TRIGGER!");
 		if (col.gameObject.tag == "Enemy") {
 			col.gameObject.GetComponent<enemyInfo>().health -= damage;
 			Destroy (this.gameObject);

@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class WeaponHUD : MonoBehaviour {
-	public Attack1 chefAttack;
-	public PlayerController chefController;
+	public mainAttack chefAttack;
+	public playerController_2 chefController;
 	public GameObject hud2, hud3;
 
 	// Use this for initialization
@@ -12,10 +12,6 @@ public class WeaponHUD : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		guiText.text = chefAttack.damage[chefController.weaponChoice].ToString ();
-		if (chefAttack.attackType == 0)
-						hud2.guiText.text = "Melee";
-		else 			hud2.guiText.text = "Ranged";
-		hud3.guiText.text = "Descriçao,\n mano!";
+		guiText.text = chefAttack.damage.ToString ();
 	}
 }
