@@ -1150,6 +1150,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ac91dc943e7f48499c534ac40bcbc5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PCAnim: {fileID: 1164884808}
+  proj: {fileID: 100000, guid: 5b9345efb8a0caf4997bc62a170affa0, type: 2}
+  xForce: 0
+  yForce: 1000
 --- !u!1 &1250491647
 GameObject:
   m_ObjectHideFlags: 0

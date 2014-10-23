@@ -46,17 +46,17 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\!Old\BobOmbBehaviour.cs" />
      <Compile Include="Assets\!Old\Projetil.cs" />
      <Compile Include="Assets\Background\HUD.cs" />
      <Compile Include="Assets\Background\movingCloud.cs" />
      <Compile Include="Assets\Background\parallax.cs" />
-     <Compile Include="Assets\Enemies\BobOmbBehaviour.cs" />
-     <Compile Include="Assets\Enemies\CupCakeAI.cs" />
+     <Compile Include="Assets\Enemies\Cupcake\CupCakeAI.cs" />
      <Compile Include="Assets\Enemies\Cupcake\doughnutIA.cs" />
+     <Compile Include="Assets\Enemies\Cupcake\doughnutIA2.cs" />
      <Compile Include="Assets\Enemies\Cupcake\enemySight.cs" />
-     <Compile Include="Assets\Enemies\doughnutIA2.cs" />
+     <Compile Include="Assets\Enemies\Toaster\toasterAttack.cs" />
      <Compile Include="Assets\Enemies\enemyInfo.cs" />
-     <Compile Include="Assets\Enemies\toasterAttack.cs" />
      <Compile Include="Assets\HUD\UpdateHealthHUD.cs" />
      <Compile Include="Assets\HUD\UptBar.cs" />
      <Compile Include="Assets\HUD\WeaponHUD.cs" />
@@ -67,6 +67,7 @@
      <Compile Include="Assets\PC\mainAttack.cs" />
      <Compile Include="Assets\PC\playerController_2.cs" />
      <Compile Include="Assets\ProCore\Prototype\Scripts\RebuildMeshOnWake.cs" />
+     <Compile Include="Assets\Projectile\enemyProjInfo.cs" />
      <Compile Include="Assets\Projectile\projInfo.cs" />
      <Compile Include="Assets\Projectile\projectile.cs" />
      <None Include="Assets\ProCore\Prototype\About\changelog.txt" />
