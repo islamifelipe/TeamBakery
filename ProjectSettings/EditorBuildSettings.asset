@@ -8,4 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Level.unity
   - enabled: 1
-    path: Assets/scene1.unity
+    path: Assets/level1_1.unity
+  - enabled: 1
+    path: Assets/MENU/MenuInicial.unity
+  - enabled: 1
+    path: Assets/MENU/GameOver.unity
+  - enabled: 1
+    path: Assets/MENU/Fases.unity
+  - enabled: 1
+    path: Assets/MENU/creditos.unity

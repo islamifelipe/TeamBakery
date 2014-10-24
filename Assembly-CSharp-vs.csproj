@@ -62,6 +62,10 @@
      <Compile Include="Assets\HUD\WeaponHUD.cs" />
      <Compile Include="Assets\HUD\uptEnemyHealthHUD.cs" />
      <Compile Include="Assets\JumpThrough.cs" />
+     <Compile Include="Assets\MENU\Fases.cs" />
+     <Compile Include="Assets\MENU\GameOver.cs" />
+     <Compile Include="Assets\MENU\MenuInicial.cs" />
+     <Compile Include="Assets\MENU\creditos.cs" />
      <Compile Include="Assets\PC\PCInfo.cs" />
      <Compile Include="Assets\PC\PlayerController.cs" />
      <Compile Include="Assets\PC\mainAttack.cs" />
