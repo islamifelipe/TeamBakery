@@ -15,6 +15,7 @@ public class PCInfo : MonoBehaviour {
 			(GameObject.Find ("mainCam")).transform.parent = null;
 			Destroy (gameObject);
 			Destroy (GameObject.Find ("HUD"));
+			
 			Application.LoadLevel("GameOver");	
 		}
 	}

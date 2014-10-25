@@ -34,7 +34,7 @@ public class enemySight : MonoBehaviour {
 
 		RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y+sightHeight), direction);
 
-		if ( (hit.collider.gameObject == Player || hit.collider.gameObject == Player1)  && Mathf.Abs(Player.transform.position.x - transform.position.x) <= sightView) {
+		if ( Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y+sightHeight), direction) && (hit.collider.gameObject == Player || hit.collider.gameObject == Player1)  && Mathf.Abs(Player.transform.position.x - transform.position.x) <= sightView) {
 			playerInSight = true;		
 		}
 	}

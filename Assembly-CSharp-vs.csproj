@@ -46,8 +46,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\!Old\BobOmbBehaviour.cs" />
-     <Compile Include="Assets\!Old\Projetil.cs" />
+     <Compile Include="Assets\!Old-Resto\BobOmbBehaviour.cs" />
+     <Compile Include="Assets\!Old-Resto\JumpThrough.cs" />
+     <Compile Include="Assets\!Old-Resto\Projetil.cs" />
      <Compile Include="Assets\Background\HUD.cs" />
      <Compile Include="Assets\Background\movingCloud.cs" />
      <Compile Include="Assets\Background\parallax.cs" />
@@ -59,13 +60,10 @@
      <Compile Include="Assets\Enemies\enemyInfo.cs" />
      <Compile Include="Assets\HUD\UpdateHealthHUD.cs" />
      <Compile Include="Assets\HUD\UptBar.cs" />
-     <Compile Include="Assets\HUD\WeaponHUD.cs" />
+     <Compile Include="Assets\HUD\WeaponHUD1.cs" />
+     <Compile Include="Assets\HUD\WeaponHUD2.cs" />
+     <Compile Include="Assets\HUD\WeaponHUD3.cs" />
      <Compile Include="Assets\HUD\uptEnemyHealthHUD.cs" />
-     <Compile Include="Assets\JumpThrough.cs" />
-     <Compile Include="Assets\MENU\Fases.cs" />
-     <Compile Include="Assets\MENU\GameOver.cs" />
-     <Compile Include="Assets\MENU\MenuInicial.cs" />
-     <Compile Include="Assets\MENU\creditos.cs" />
      <Compile Include="Assets\PC\PCInfo.cs" />
      <Compile Include="Assets\PC\PlayerController.cs" />
      <Compile Include="Assets\PC\mainAttack.cs" />
@@ -74,6 +72,11 @@
      <Compile Include="Assets\Projectile\enemyProjInfo.cs" />
      <Compile Include="Assets\Projectile\projInfo.cs" />
      <Compile Include="Assets\Projectile\projectile.cs" />
+     <Compile Include="Assets\Scenes\Fases.cs" />
+     <Compile Include="Assets\Scenes\GameOver.cs" />
+     <Compile Include="Assets\Scenes\MenuInicial.cs" />
+     <Compile Include="Assets\Scenes\StageControl.cs" />
+     <Compile Include="Assets\Scenes\creditos.cs" />
      <None Include="Assets\ProCore\Prototype\About\changelog.txt" />
      <None Include="Assets\ProCore\Prototype\Shader\VertexBillboard.shader" />
      <None Include="Assets\ProCore\Prototype\Shader\DiffuseVertexColor.shader" />

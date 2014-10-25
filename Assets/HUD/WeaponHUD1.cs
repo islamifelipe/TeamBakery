@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WeaponHUD : MonoBehaviour {
+public class WeaponHUD1 : MonoBehaviour {
 	public mainAttack chefAttack;
 	public playerController_2 chefController;
-	public GameObject hud2, hud3;
 
 	// Use this for initialization
 	void Start () {

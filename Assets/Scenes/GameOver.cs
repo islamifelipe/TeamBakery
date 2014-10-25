@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class GameOver : MonoBehaviour {
+	public string stage;
+
 
 	// Use this for initialization
 	void Start () {	
@@ -19,6 +21,10 @@ public class GameOver : MonoBehaviour {
 			Application.LoadLevel("Fases");	
 		}
 		if (GUI.Button (new Rect (280, 140, 150, 50), "Jogar novamente")) {
+			
+			int LIndex = GameObject.Find("PreviousStageInfo").GetComponent<StageControl>().LastIndex;
+		
+			Application.LoadLevel(LIndex);
 			/*Application.LoadLevel("CENA");*/
 			//Descomente a linha acima e substitua "CENA" pelo nome da cena do jogo correte 
 		}
