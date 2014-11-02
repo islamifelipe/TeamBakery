@@ -77,20 +77,31 @@
      <Compile Include="Assets\Scenes\GameOver.cs" />
      <Compile Include="Assets\Scenes\MenuInicial.cs" />
      <Compile Include="Assets\Scenes\StageControl.cs" />
+     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\SortingLayerExposed.cs" />
+     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TileAnimator.cs" />
      <Compile Include="Assets\WeaponHUDControl.cs" />
      <Compile Include="Assets\cartMovement.cs" />
      <Compile Include="Assets\followCart.cs" />
+     <Compile Include="Assets\leverAction1.cs" />
+     <Compile Include="Assets\leverAction2.cs" />
      <Compile Include="Assets\weaponIcon.cs" />
+     <None Include="Assets\Tiled2Unity\Imported\t.tiled2unity.xml" />
      <None Include="Assets\ProCore\Prototype\About\changelog.txt" />
      <None Include="Assets\ProCore\Prototype\Shader\VertexBillboard.shader" />
      <None Include="Assets\ProCore\Prototype\Shader\DiffuseVertexColor.shader" />
+     <None Include="Assets\Tiled2Unity\Prefabs\_ReadMe.txt" />
+     <None Include="Assets\Tiled2Unity\Shaders\shaTiledMap.shader" />
      <None Include="Assets\ProCore\Shared\About\README.txt" />
      <None Include="Assets\ProCore\Prototype\Shader\DiffuseVertexColorTransparency.shader" />
+     <None Include="Assets\Tiled2Unity\Materials\_ReadMe.txt" />
      <None Include="Assets\ProCore\Prototype\Shader\UnlitColor.shader" />
+     <None Include="Assets\Tiled2Unity\Textures\_ReadMe.txt" />
      <None Include="Assets\ProCore\Prototype\About\pc_AboutEntry_ProBuilder.txt" />
      <None Include="Assets\ProCore\Prototype\Shader\UnlitColor-Overlay.shader" />
      <None Include="Assets\ProCore\Prototype\Shader\DiffuseVertexColorEmission.shader" />
+     <None Include="Assets\Tiled2Unity\Imported\_ReadMe.txt" />
      <None Include="Assets\ProCore\Prototype\About\Credits.txt" />
+     <None Include="Assets\Tiled2Unity\Meshes\_ReadMe.txt" />
  <Reference Include="ProBuilderCore">
  <HintPath>C:/Workspace/TeamBakery/Assets/ProCore/Prototype/Classes/ProBuilderCore.dll</HintPath>
  </Reference>

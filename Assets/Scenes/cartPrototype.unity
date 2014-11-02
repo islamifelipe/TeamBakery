@@ -86,8 +86,8 @@ GameObject:
   - 50: {fileID: 53620125}
   - 61: {fileID: 53620124}
   m_Layer: 0
-  m_Name: DarkGrey_Rect32x128
-  m_TagString: Untagged
+  m_Name: floor2x10
+  m_TagString: jumpSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,8 +164,8 @@ GameObject:
   - 50: {fileID: 72233439}
   - 61: {fileID: 72233438}
   m_Layer: 0
-  m_Name: DarkGrey_Rect32x128
-  m_TagString: Untagged
+  m_Name: floor2x10
+  m_TagString: jumpSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -242,8 +242,8 @@ GameObject:
   - 50: {fileID: 201730406}
   - 61: {fileID: 201730405}
   m_Layer: 0
-  m_Name: DarkGrey_Rect32x128
-  m_TagString: Untagged
+  m_Name: floor2x10
+  m_TagString: jumpSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -320,8 +320,8 @@ GameObject:
   - 50: {fileID: 271257710}
   - 61: {fileID: 271257709}
   m_Layer: 0
-  m_Name: DarkGrey_Rect32x128
-  m_TagString: Untagged
+  m_Name: floor2x10
+  m_TagString: jumpSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -398,8 +398,8 @@ GameObject:
   - 50: {fileID: 694921528}
   - 61: {fileID: 694921527}
   m_Layer: 0
-  m_Name: DarkGrey_Rect32x128
-  m_TagString: Untagged
+  m_Name: floor2x10
+  m_TagString: jumpSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -476,6 +476,7 @@ GameObject:
   - 114: {fileID: 703778966}
   - 61: {fileID: 703778965}
   - 50: {fileID: 703778964}
+  - 114: {fileID: 703778969}
   m_Layer: 0
   m_Name: Cart
   m_TagString: Untagged
@@ -493,7 +494,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -521,6 +522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cartSpeed: 20
+  jumpStrenght: 500
 --- !u!212 &703778967
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -555,6 +557,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!114 &703778969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 703778963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1836e12d84f3e4f43b2a74a64d682ed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  proj: {fileID: 100000, guid: bfca2db998cac294eb3813a0a6a77b8c, type: 2}
+  xForce: 4000
+  yForce: 0
 --- !u!1 &952606759
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,8 +583,8 @@ GameObject:
   - 50: {fileID: 952606761}
   - 61: {fileID: 952606760}
   m_Layer: 0
-  m_Name: DarkGrey_Rect32x128
-  m_TagString: Untagged
+  m_Name: floor2x10
+  m_TagString: jumpSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -645,8 +661,8 @@ GameObject:
   - 50: {fileID: 1404505803}
   - 61: {fileID: 1404505802}
   m_Layer: 0
-  m_Name: DarkGrey_Rect32x128
-  m_TagString: Untagged
+  m_Name: floor2x10
+  m_TagString: jumpSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -723,8 +739,8 @@ GameObject:
   - 50: {fileID: 1629463622}
   - 61: {fileID: 1629463621}
   m_Layer: 0
-  m_Name: DarkGrey_Rect32x128
-  m_TagString: Untagged
+  m_Name: floor2x10
+  m_TagString: jumpSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -801,8 +817,8 @@ GameObject:
   - 50: {fileID: 1642092282}
   - 61: {fileID: 1642092281}
   m_Layer: 0
-  m_Name: DarkGrey_Rect32x128
-  m_TagString: Untagged
+  m_Name: floor2x10
+  m_TagString: jumpSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -976,8 +992,8 @@ GameObject:
   - 50: {fileID: 1823538532}
   - 61: {fileID: 1823538531}
   m_Layer: 0
-  m_Name: DarkGrey_Rect32x128
-  m_TagString: Untagged
+  m_Name: floor2x10
+  m_TagString: jumpSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

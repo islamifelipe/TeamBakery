@@ -3,7 +3,7 @@ using System.Collections;
 
 public class weaponIcon : MonoBehaviour {
 	public Texture inactiveTexture;
-	private Texture activeTexture;
+	public Texture activeTexture;
 
 	// Use this for initialization
 	void Start () {

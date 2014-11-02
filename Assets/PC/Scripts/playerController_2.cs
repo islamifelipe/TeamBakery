@@ -3,20 +3,21 @@ using System.Collections;
 
 public class playerController_2: MonoBehaviour {
 	
-	public AudioClip changeWeaponSound, duckSound, jumpSound, fallSound, pauseSound, unPauseSound;
-	public AudioSource pauseMusic, gameMusic;
-	public float maxHorSpeed, jumpStrenght, sprintBonus, maxSprintSpeed, sprintFadeSpeed, bounceTest, horDeacc, horAcc, shakeIntensity, attackDelay, attackTimer;
+	
 	public bool attack;
 	public bool[] weaponAvail = new bool[10];
 	public int[] weaponDamage = new int[10];
 	public int weaponChoice, lastWeaponChoice;
-	public Vector3 initialScale;
+	public float maxHorSpeed, jumpStrenght, sprintBonus, maxSprintSpeed, sprintFadeSpeed, bounceTest, horDeacc, horAcc, shakeIntensity, attackDelay, attackTimer;
 	public Animator PCAnim;
 	public GameObject mainAttack, weaponHud;
 	public GameObject[] weaponIcon = new GameObject[10];
+	public AudioClip changeWeaponSound, duckSound, jumpSound, fallSound, pauseSound, unPauseSound;
+	public AudioSource pauseMusic, gameMusic;
+	public Vector3 initialScale;
+	private bool duck, jump;
 	private int intAux;
 	private float horSpeed, verSpeed, colliderCenter, colliderSize;
-	private bool duck, jump;
 	private BoxCollider2D chefCollider;
 	
 	void Start(){	
@@ -230,7 +231,7 @@ public class playerController_2: MonoBehaviour {
 		if(Input.GetAxis("Jump") > 0 && !duck && jump){
 			AudioSource.PlayClipAtPoint(jumpSound, transform.position);
 			jump = false;
-			rigidbody2D.AddForce(new Vector2(0, jumpStrenght));
+			verSpeed = jumpStrenght;
 		}
 		// Variaveis do Animator
 		PCAnim.SetFloat ("horSpeed", Mathf.Abs(horSpeed));
@@ -240,6 +241,6 @@ public class playerController_2: MonoBehaviour {
 		PCAnim.SetBool ("jump", jump);
 		PCAnim.SetInteger ("attackType", weaponChoice);
 		// Atualizaçao de velocidade
-		rigidbody2D.velocity = new Vector2 (horSpeed, rigidbody2D.velocity.y);
+		rigidbody2D.velocity = new Vector2 (horSpeed, verSpeed);
 	}
 }
