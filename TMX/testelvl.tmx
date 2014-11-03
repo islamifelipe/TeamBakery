@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="10" tilewidth="128" tileheight="128">
+ <tileset firstgid="1" name="Orange_Box128x128" tilewidth="128" tileheight="128">
+  <image source="../../../Workspace/TeamBakery/Assets/2D Dev Sprites/Orange/Orange_Box128x128.png" width="128" height="128"/>
+ </tileset>
+ <layer name="Camada 1" width="20" height="10">
+  <data encoding="base64" compression="zlib">
+   eJxjZKAeYITiUfOGt3n0wtRwB6V+BAA3cAA5
+  </data>
+ </layer>
+ <layer name="Camada 2" width="20" height="10">
+  <data encoding="base64" compression="zlib">
+   eJxjYCAMGKGYWoCa5jEyDF7zGBloax4lZmIzi1I3IptB7TQzUAAAM5gAHg==
+  </data>
+ </layer>
+</map>

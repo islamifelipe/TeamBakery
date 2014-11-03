@@ -1,8 +1,7 @@
 ﻿using UnityEngine;	
 using System.Collections;
 
-public class playerController_2: MonoBehaviour {
-	
+public class playerController_2: MonoBehaviour {	
 	
 	public bool attack;
 	public bool[] weaponAvail = new bool[10];
@@ -36,7 +35,14 @@ public class playerController_2: MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D col){
 		if (col.gameObject.tag == "jumpSurface") {
 			jump = true;
-			AudioSource.PlayClipAtPoint(fallSound, transform.position);
+			//AudioSource.PlayClipAtPoint(fallSound, transform.position);
+		}
+	}
+	
+	void OnTriggerEnter2D(Collider2D col){
+		if (col.gameObject.tag == "jumpSurface") {
+			jump = true;
+			//AudioSource.PlayClipAtPoint(fallSound, transform.position);
 		}
 	}
 	
@@ -47,17 +53,7 @@ public class playerController_2: MonoBehaviour {
 		}
 	}
 	
-	void Update () {
-		updateWeapons (); //DEBUG APENAS. REMOVER APOS ADICIONAR ARMAS COLETADAS
-		duck = false;
-		horSpeed = rigidbody2D.velocity.x;
-		verSpeed = rigidbody2D.velocity.y;
-		// Ativa/desativa o collider do ataque
-		if(!attack) mainAttack.collider2D.enabled = false;
-		if (PCAnim.GetCurrentAnimatorStateInfo (0).IsName ("chefAttack1")) attack = true;
-		if (PCAnim.GetCurrentAnimatorStateInfo (0).IsName ("Idle")) attack = false;
-		
-		// Botao de pausa
+	void pauseButton(){
 		if (Input.GetKeyDown (KeyCode.P)) {
 			if(Time.timeScale == 0){
 				Time.timeScale = 1;
@@ -66,13 +62,15 @@ public class playerController_2: MonoBehaviour {
 				AudioSource.PlayClipAtPoint(unPauseSound, transform.position);
 			}
 			else{
-				AudioSource.PlayClipAtPoint(pauseSound, transform.position);
+				AudioSource.PlayClipAtPoint(unPauseSound, transform.position);
 				pauseMusic.PlayDelayed(1);
 				gameMusic.Pause();
 				Time.timeScale = 0;
 			}
 		}
-		// Botao para trocar para a arma anterior
+	}
+	
+	void changeWeapon(){
 		if (Input.GetKeyDown(KeyCode.Q) && weaponAvail[lastWeaponChoice]) {
 			AudioSource.PlayClipAtPoint(changeWeaponSound, transform.position);
 			intAux = weaponChoice;
@@ -172,12 +170,9 @@ public class playerController_2: MonoBehaviour {
 			// Show/hide weapon hud
 			weaponHud.GetComponent<WeaponHUDControl>().showHud(weaponChoice);
 		}
-		
-		// Resetar fase
-		if (Input.GetKeyDown (KeyCode.L)) {
-			Application.LoadLevel (Application.loadedLevelName);
-		}
-		// Abaixar
+	}
+	
+	void duckButton(){
 		if (Input.GetKey (KeyCode.DownArrow) && (
 			PCAnim.GetCurrentAnimatorStateInfo(0).IsName("Idle") ||
 			PCAnim.GetCurrentAnimatorStateInfo(0).IsName("Walking") ||
@@ -195,7 +190,9 @@ public class playerController_2: MonoBehaviour {
 			chefCollider.size = new Vector2 (chefCollider.size.x, colliderSize);
 			chefCollider.center = new Vector2 (chefCollider.center.x, colliderCenter);
 		}
-		// Ataque
+	}
+	
+	void attackButton(){
 		if (Input.GetAxis ("Attack") > 0 && !duck && attackTimer <= 0f && (
 			PCAnim.GetCurrentAnimatorStateInfo (0).IsName ("Idle") ||
 			PCAnim.GetCurrentAnimatorStateInfo (0).IsName ("Walking")
@@ -207,7 +204,9 @@ public class playerController_2: MonoBehaviour {
 		else if(attackTimer > 0f){
 			attackTimer -= Time.deltaTime;
 		}
-		// Andar para a direita
+	}
+	
+	void horizontalMovement(){
 		if(Input.GetAxis("Horizontal") > 0 && !duck){
 			horSpeed += horAcc;
 			if(horSpeed > maxHorSpeed) horSpeed -= sprintFadeSpeed;
@@ -227,19 +226,38 @@ public class playerController_2: MonoBehaviour {
 			}
 			transform.localScale = new Vector3(-initialScale.x, initialScale.y, initialScale.z);
 		}
-		// Salto
+	}
+	
+	void jumpButton(){
 		if(Input.GetAxis("Jump") > 0 && !duck && jump){
 			AudioSource.PlayClipAtPoint(jumpSound, transform.position);
 			jump = false;
 			verSpeed = jumpStrenght;
 		}
+	}
+	
+	void Update () {
+		updateWeapons (); //DEBUG APENAS. REMOVER APOS ADICIONAR ARMAS COLETADAS
+		duck = false;
+		horSpeed = rigidbody2D.velocity.x;
+		verSpeed = rigidbody2D.velocity.y;
+		// Ativa/desativa o collider do ataque
+		if(!attack) mainAttack.collider2D.enabled = false;
+		if (PCAnim.GetCurrentAnimatorStateInfo (0).IsName ("chefAttack1")) attack = true;
+		if (PCAnim.GetCurrentAnimatorStateInfo (0).IsName ("Idle")) attack = false;
+		
+		pauseButton();
+		changeWeapon();
+		duckButton();
+		attackButton();
+		horizontalMovement();
+		jumpButton();
+		
 		// Variaveis do Animator
 		PCAnim.SetFloat ("horSpeed", Mathf.Abs(horSpeed));
-		PCAnim.SetFloat ("verSpeed", verSpeed);
 		PCAnim.SetBool ("duck", duck);
 		PCAnim.SetBool ("attack", attack);
-		PCAnim.SetBool ("jump", jump);
-		PCAnim.SetInteger ("attackType", weaponChoice);
+		PCAnim.SetBool ("jump", !jump);
 		// Atualizaçao de velocidade
 		rigidbody2D.velocity = new Vector2 (horSpeed, verSpeed);
 	}

@@ -226,11 +226,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddc3510033e306c4d922872e10591e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrollRange: 5
+  patrollRange: 10
   Right: 0
-  maxVelocity: 0
-  timeForIdle: 7
-  timeAsIdle: 10
+  maxVelocity: 10
+  timeForIdle: 10
+  timeAsIdle: 3
   doughnutAnim: {fileID: 9500000}
 --- !u!114 &11400004
 MonoBehaviour:

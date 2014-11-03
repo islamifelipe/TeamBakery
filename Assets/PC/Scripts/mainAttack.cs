@@ -6,7 +6,6 @@ public class mainAttack : MonoBehaviour {
 	public int damage;
 
 	void OnTriggerEnter2D(Collider2D col){
-		print("mainAttack check");
 		if (chef.attack && col.gameObject.tag == "Enemy") {
 			print("mainAttack hit!");
 			col.gameObject.GetComponent<enemyInfo>().health -= damage;

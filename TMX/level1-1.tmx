@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="128" tileheight="128">
+ <tileset firstgid="1" name="Orange_Box128x128" tilewidth="128" tileheight="128">
+  <image source="../../../Workspace/TeamBakery/Assets/2D Dev Sprites/Orange/Orange_Box128x128.png" width="128" height="128"/>
+ </tileset>
+ <layer name="Camada de Tiles 1" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt2NGSwiAQRNHw/z/tq1KEDBOEnuGeqtTuukqmbaOJ1wUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGYruwfAD/rQcnIfitkVZ1pFMXu5NOdaQTG3p49SbRGpzq46V63c/P5mPcXsTzOpzv2Wai5LH7v8c9/qfdTvB7PmXPWcjs4cqY/Z6/du//5Z32Zd39PJiX301p29P0uO1nuAch8zZ+utad2X57VuPTeJ0MfMx8zowzPP07rZ+rDk6f1/5vu85/UeqY9smzWzEk+eCKJ2ojjTLJH7OJFqH6eiDy30oSV6H2qzeymfS45el0Uy41plNcssu6/rdl47rjbSRyYZ+lCa+y360KOYy/v5kYFiHs/5bqZ+1Ob3zFPff1Wefzx39DG+r1L9fXcfz/GaoY/WGqtY5m31cveYyH2sOi6eZvIe071jS8XIcb7rc6PFs+9WRvU+Tthaz4GKLOetFvSho5dPKfcJfVjOD1Sc0McTpdyn96GWmz60ctOHVu6T+1DMTR9auS3XrxmpZrZ+pxCV9zuUXXZ/l6SyAQAAIKcPqC0Cfg==
+  </data>
+ </layer>
+</map>
