@@ -1,9 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\WeaponHUDControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\spikeInfo.cs">
     <Files>
-      <File FileName="Assets\PC\Scripts\playerController_2.cs" Line="122" Column="1" />
-      <File FileName="Assets\WeaponHUDControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\spikeInfo.cs" Line="14" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

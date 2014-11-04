@@ -195,7 +195,7 @@ public class playerController_2: MonoBehaviour {
 	void attackButton(){
 		if (Input.GetAxis ("Attack") > 0 && !duck && attackTimer <= 0f && (
 			PCAnim.GetCurrentAnimatorStateInfo (0).IsName ("Idle") ||
-			PCAnim.GetCurrentAnimatorStateInfo (0).IsName ("Walking")
+			PCAnim.GetCurrentAnimatorStateInfo (0).IsName ("Walk")
 			)) {
 			attackTimer = attackDelay;
 			mainAttack.collider2D.enabled = true;
@@ -243,7 +243,6 @@ public class playerController_2: MonoBehaviour {
 		verSpeed = rigidbody2D.velocity.y;
 		// Ativa/desativa o collider do ataque
 		if(!attack) mainAttack.collider2D.enabled = false;
-		if (PCAnim.GetCurrentAnimatorStateInfo (0).IsName ("chefAttack1")) attack = true;
 		if (PCAnim.GetCurrentAnimatorStateInfo (0).IsName ("Idle")) attack = false;
 		
 		pauseButton();

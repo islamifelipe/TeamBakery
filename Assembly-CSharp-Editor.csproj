@@ -85,6 +85,7 @@
      <None Include="Assets\ProCore\Shared\About\README.txt" />
      <None Include="Assets\Tiled2Unity\Imported\testelvl.tiled2unity.xml" />
      <None Include="Assets\ProCore\Prototype\Shader\DiffuseVertexColorTransparency.shader" />
+     <None Include="Assets\Tiled2Unity\Imported\hill.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\testelvl2.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Materials\_ReadMe.txt" />
      <None Include="Assets\ProCore\Prototype\Shader\UnlitColor.shader" />

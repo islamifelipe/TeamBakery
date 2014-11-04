@@ -85,6 +85,8 @@
      <Compile Include="Assets\followCart.cs" />
      <Compile Include="Assets\leverAction1.cs" />
      <Compile Include="Assets\leverAction2.cs" />
+     <Compile Include="Assets\leverLift1.cs" />
+     <Compile Include="Assets\spikeInfo.cs" />
      <Compile Include="Assets\weaponIcon.cs" />
      <None Include="Assets\Tiled2Unity\Imported\t.tiled2unity.xml" />
      <None Include="Assets\ProCore\Prototype\About\changelog.txt" />
@@ -95,6 +97,7 @@
      <None Include="Assets\ProCore\Shared\About\README.txt" />
      <None Include="Assets\Tiled2Unity\Imported\testelvl.tiled2unity.xml" />
      <None Include="Assets\ProCore\Prototype\Shader\DiffuseVertexColorTransparency.shader" />
+     <None Include="Assets\Tiled2Unity\Imported\hill.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\testelvl2.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Materials\_ReadMe.txt" />
      <None Include="Assets\ProCore\Prototype\Shader\UnlitColor.shader" />
