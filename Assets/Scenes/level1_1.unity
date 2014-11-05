@@ -773,6 +773,46 @@ Prefab:
       propertyPath: Right
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[3]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[4]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[5]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[6]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[7]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[8]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[9]
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
   m_RootGameObject: {fileID: 2046291717}
@@ -832,6 +872,46 @@ Prefab:
     - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
       propertyPath: health
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[3]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[4]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[5]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[6]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[7]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[8]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[9]
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
@@ -1644,7 +1724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attack: 0
   weaponAvail: 00010100010000000000
-  weaponDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  weaponDamage: 0a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a000000
   weaponChoice: 0
   lastWeaponChoice: 0
   maxHorSpeed: 10
@@ -2328,6 +2408,7 @@ MonoBehaviour:
   horKnockback: 15
   verKnockback: 10
   liftOff: 1
+  weaponDamage: 01000000010000000100000001000000010000000100000001000000010000000100000001000000
   hitSound: {fileID: 8300000, guid: 1e2a1990a50bbcc4ebd248b290134b7f, type: 3}
 --- !u!61 &769910357
 BoxCollider2D:
@@ -2830,6 +2911,7 @@ MonoBehaviour:
   horKnockback: 15
   verKnockback: 10
   liftOff: 1
+  weaponDamage: 01000000010000000100000001000000010000000100000001000000010000000100000001000000
   hitSound: {fileID: 8300000, guid: 1e2a1990a50bbcc4ebd248b290134b7f, type: 3}
 --- !u!61 &931070107
 BoxCollider2D:
@@ -3671,6 +3753,7 @@ MonoBehaviour:
   horKnockback: 15
   verKnockback: 10
   liftOff: 1
+  weaponDamage: 01000000010000000100000001000000010000000100000001000000010000000100000001000000
   hitSound: {fileID: 8300000, guid: 1e2a1990a50bbcc4ebd248b290134b7f, type: 3}
 --- !u!61 &1085070759
 BoxCollider2D:
@@ -5030,6 +5113,7 @@ MonoBehaviour:
   horKnockback: 15
   verKnockback: 10
   liftOff: 1
+  weaponDamage: 01000000010000000100000001000000010000000100000001000000010000000100000001000000
   hitSound: {fileID: 8300000, guid: 1e2a1990a50bbcc4ebd248b290134b7f, type: 3}
 --- !u!61 &1471844503
 BoxCollider2D:
@@ -5155,6 +5239,46 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
       propertyPath: Right
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[3]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[4]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[5]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[6]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[7]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[8]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[9]
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5870,6 +5994,7 @@ MonoBehaviour:
   horKnockback: 15
   verKnockback: 10
   liftOff: 1
+  weaponDamage: 01000000010000000100000001000000010000000100000001000000010000000100000001000000
   hitSound: {fileID: 8300000, guid: 1e2a1990a50bbcc4ebd248b290134b7f, type: 3}
 --- !u!61 &1758640832
 BoxCollider2D:
@@ -5995,6 +6120,46 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
       propertyPath: Right
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[3]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[4]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[5]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[6]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[7]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[8]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[9]
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6743,6 +6908,46 @@ Prefab:
       propertyPath: Right
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[3]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[4]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[5]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[6]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[7]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[8]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[9]
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
   m_RootGameObject: {fileID: 1085070755}
@@ -6805,6 +7010,46 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
       propertyPath: Right
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[3]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[4]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[5]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[6]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[7]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[8]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: weaponDamage.Array.data[9]
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6964,6 +7209,7 @@ MonoBehaviour:
   horKnockback: 15
   verKnockback: 10
   liftOff: 1
+  weaponDamage: 01000000010000000100000001000000010000000100000001000000010000000100000001000000
   hitSound: {fileID: 8300000, guid: 1e2a1990a50bbcc4ebd248b290134b7f, type: 3}
 --- !u!61 &2046291722
 BoxCollider2D:

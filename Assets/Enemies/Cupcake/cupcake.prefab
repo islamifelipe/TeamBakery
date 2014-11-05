@@ -261,11 +261,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28a5beedce6c3f74faf07fcb6ae91ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 300
+  health: 100
   damage: 10
   horKnockback: 15
   verKnockback: 10
   liftOff: 1
+  weaponDamage: 01000000010000000100000001000000010000000100000001000000010000000100000001000000
   hitSound: {fileID: 8300000, guid: 1e2a1990a50bbcc4ebd248b290134b7f, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
