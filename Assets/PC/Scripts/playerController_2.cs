@@ -223,9 +223,9 @@ public class playerController_2: MonoBehaviour {
 	}
 	
 	void jumpButton(){
-		if(Input.GetAxis("Jump") > 0 && !duck && jump){
+		if(Input.GetAxis("Jump") > 0 && !duck && jumpCheck.jump){
 			AudioSource.PlayClipAtPoint(jumpSound, transform.position);
-			jump = false;
+			jumpCheck.jump = false;
 			verSpeed = jumpStrenght;
 		}
 	}

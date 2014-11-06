@@ -5,7 +5,6 @@ public class groundUpdate : MonoBehaviour {
 	public bool jump;	
 	// Use this for initialization
 	void Start () {
-		jump = false;
 	}	
 	
 	void OnTriggerEnter2D(Collider2D col){
