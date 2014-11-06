@@ -2,8 +2,9 @@
 using System.Collections;
 
 public class spikeInfo : MonoBehaviour {
-	public int damage, horKnockback, verKnockback, liftOff;
+	public int damage, verKnockback;
 	public AudioClip hitSound;
+	private Vector3 velocity;
 	
 	// Use this for initialization
 	void Start () {
@@ -13,15 +14,7 @@ public class spikeInfo : MonoBehaviour {
 		if(col.gameObject.tag == "Player"){
 			//AudioSource.PlayClipAtPoint(hitSound, transform.position);
 			col.gameObject.GetComponent<PCInfo>().health -= damage;
-			
-			if(col.gameObject.transform.position.x < this.transform.position.x){
-				col.gameObject.transform.position = new Vector2(col.gameObject.transform.position.x-liftOff, col.gameObject.transform.position.y+liftOff);
-				col.gameObject.rigidbody2D.velocity = new Vector2(-horKnockback, verKnockback);
-			}
-			else{
-				col.gameObject.transform.position = new Vector2(col.gameObject.transform.position.x+liftOff, col.gameObject.transform.position.y+liftOff);
-				col.gameObject.rigidbody2D.velocity = new Vector2(horKnockback, verKnockback);
-			}
+			col.gameObject.rigidbody2D.velocity = new Vector2(col.gameObject.rigidbody2D.velocity.x, verKnockback);
 		}
 	}
 	

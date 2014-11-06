@@ -190,24 +190,24 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_Poly:
     m_Paths:
-    - - {x: 2052.25366, y: 1.31721497}
-      - {x: 2563.02686, y: 3.92684031}
-      - {x: 2563.06226, y: -120.110794}
-      - {x: 2813.59717, y: -124.48938}
-      - {x: 2810.67627, y: -253.047607}
-      - {x: 2946.83716, y: -257.816895}
-      - {x: 2952.02441, y: -638.872375}
-      - {x: 2811.44092, y: -640.437378}
-      - {x: 2811.50391, y: -508.907043}
-      - {x: 2311.19458, y: -511.007782}
-      - {x: 2309.22729, y: -768.06781}
-      - {x: 2052.01196, y: -765.904175}
-      - {x: 2053.3501, y: -894.409302}
-      - {x: 376.59436, y: -892.476013}
-      - {x: 372.38559, y: -761.060242}
-      - {x: 1916.65186, y: -764.495911}
-      - {x: 1917.25464, y: -640.132568}
-      - {x: 2171.75903, y: -638.167114}
+    - - {x: 2047.86719, y: .439884901}
+      - {x: 2559.51758, y: -1.33710802}
+      - {x: 2560.43018, y: -128.884048}
+      - {x: 2813.59717, y: -130.246765}
+      - {x: 2814.51416, y: -256.885864}
+      - {x: 2942.99854, y: -255.897766}
+      - {x: 2942.42871, y: -640.791504}
+      - {x: 2816.60986, y: -640.096741}
+      - {x: 2816.51953, y: -510.340118}
+      - {x: 2301.54346, y: -510.130463}
+      - {x: 2301.9082, y: -767.152832}
+      - {x: 2047.43701, y: -766.819092}
+      - {x: 2047.86035, y: -892.579346}
+      - {x: 383.913818, y: -894.305908}
+      - {x: 384.279785, y: -767.464905}
+      - {x: 1919.39648, y: -767.240723}
+      - {x: 1920, y: -638.302673}
+      - {x: 2174.39014, y: -639.044434}
       - {x: 2174.58911, y: -126.012764}
       - {x: 2047.74097, y: -124.888519}
 --- !u!1001 &23945235
@@ -621,6 +621,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1589256760}
   m_RootOrder: 0
+--- !u!1 &244589027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 244589028}
+  - 61: {fileID: 244589029}
+  - 114: {fileID: 244589030}
+  m_Layer: 0
+  m_Name: groundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &244589028
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 244589027}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 675905009}
+  m_RootOrder: 2
+--- !u!61 &244589029
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 244589027}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: .600000024, y: .200000003}
+  m_Center: {x: 0, y: -.600000024}
+--- !u!114 &244589030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 244589027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 910d7715f4a075243b788f485b55e658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jump: 0
 --- !u!1 &273095281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,9 +1222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  horKnockback: 0
   verKnockback: 25
-  liftOff: 1
   hitSound: {fileID: 0}
 --- !u!61 &418824111
 BoxCollider2D:
@@ -1398,9 +1448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  horKnockback: 0
   verKnockback: 25
-  liftOff: 1
   hitSound: {fileID: 0}
 --- !u!61 &468635541
 BoxCollider2D:
@@ -1458,7 +1506,7 @@ PolygonCollider2D:
       - {x: 58.8311882, y: -17.6604195}
       - {x: 56.2946854, y: -23.8416615}
       - {x: .0128710931, y: -25.3557396}
-      - {x: -2.38676262, y: .214561686}
+      - {x: -2.49916005, y: .074067086}
       - {x: 13.0512104, y: .124847889}
       - {x: 10.681489, y: -2.3731544}
       - {x: 28.3591747, y: -2.39941621}
@@ -1673,9 +1721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  horKnockback: 0
   verKnockback: 25
-  liftOff: 1
   hitSound: {fileID: 0}
 --- !u!61 &665064155
 BoxCollider2D:
@@ -1761,6 +1807,7 @@ MonoBehaviour:
   pauseMusic: {fileID: 1945026956}
   gameMusic: {fileID: 1589256765}
   initialScale: {x: 0, y: 0, z: 0}
+  jumpCheck: {fileID: 244589030}
 --- !u!50 &675905005
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -1787,7 +1834,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .899999976, y: 1.04999995}
+  m_Size: {x: .600000024, y: 1.04999995}
   m_Center: {x: 0, y: -.100000001}
 --- !u!95 &675905007
 Animator:
@@ -1835,11 +1882,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 675905003}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 115.120003, y: -2.7643857, z: 0}
+  m_LocalPosition: {x: 7.80000019, y: -2.7643857, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 1589256760}
   - {fileID: 24642697}
+  - {fileID: 244589028}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!114 &675905010
@@ -1868,8 +1916,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   proj: {fileID: 100000, guid: c0b8154c8b45a9942b1f184b04657d6a, type: 2}
-  xForce: 4000
-  yForce: 100
+  xForce: 1000
+  yForce: 0
 --- !u!1 &681922411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1969,9 +2017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  horKnockback: 0
   verKnockback: 25
-  liftOff: 1
   hitSound: {fileID: 0}
 --- !u!61 &694231775
 BoxCollider2D:
@@ -2067,28 +2113,28 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_Poly:
     m_Paths:
-    - - {x: 3190.44678, y: -1148.40881}
-      - {x: 3203.7854, y: -1020.91479}
-      - {x: 3069.01465, y: -1017.68048}
-      - {x: 3075.56494, y: -897.069336}
-      - {x: 3322.08789, y: -889.467651}
-      - {x: 3323.88037, y: -1145.34875}
-      - {x: 3716.23657, y: -1153.16687}
+    - - {x: 3199.62793, y: -1152.99927}
+      - {x: 3201.49023, y: -1022.06238}
+      - {x: 3072.45752, y: -1022.27087}
+      - {x: 3070.97412, y: -895.921814}
+      - {x: 3325.53027, y: -896.353333}
+      - {x: 3328.4707, y: -1151.08679}
+      - {x: 3712.79346, y: -1154.31458}
       - {x: 3710.34766, y: -893.618896}
-      - {x: 3579.83594, y: -885.156616}
-      - {x: 3582.47632, y: -756.7901}
-      - {x: 3837.38086, y: -759.371643}
+      - {x: 3583.27832, y: -896.632751}
+      - {x: 3582.47607, y: -768.685791}
+      - {x: 3837.38086, y: -766.509033}
       - {x: 3837.74561, y: -1148.61292}
       - {x: 4093.5874, y: -1151.21838}
-      - {x: 4096.24121, y: -646.427429}
-      - {x: 4347.51807, y: -641.004089}
-      - {x: 4349.97168, y: -757.216064}
-      - {x: 4219.89453, y: -768.628052}
-      - {x: 4220.35547, y: -1146.10046}
-      - {x: 4983.64795, y: -1140.1178}
-      - {x: 4988.74951, y: -1275.24219}
-      - {x: 2811.76685, y: -1278.98389}
-      - {x: 2815.74292, y: -1146.45239}
+      - {x: 4096.24072, y: -639.289978}
+      - {x: 4348.70801, y: -639.814514}
+      - {x: 4351.16113, y: -767.92218}
+      - {x: 4221.0835, y: -767.438477}
+      - {x: 4223.92334, y: -1152.04834}
+      - {x: 4990.78516, y: -1148.4447}
+      - {x: 4991.12842, y: -1276.43176}
+      - {x: 2814.06201, y: -1277.83618}
+      - {x: 2815.74316, y: -1152.19043}
 --- !u!1 &714201193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2239,9 +2285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  horKnockback: 0
   verKnockback: 25
-  liftOff: 1
   hitSound: {fileID: 0}
 --- !u!61 &733235150
 BoxCollider2D:
@@ -2778,9 +2822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  horKnockback: 0
   verKnockback: 25
-  liftOff: 1
   hitSound: {fileID: 0}
 --- !u!61 &898563066
 BoxCollider2D:
@@ -3662,9 +3704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  horKnockback: 0
   verKnockback: 25
-  liftOff: 1
   hitSound: {fileID: 0}
 --- !u!61 &1064632202
 BoxCollider2D:
@@ -4089,9 +4129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  horKnockback: 0
   verKnockback: 25
-  liftOff: 1
   hitSound: {fileID: 0}
 --- !u!61 &1152980879
 BoxCollider2D:
@@ -4467,9 +4505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  horKnockback: 0
   verKnockback: 25
-  liftOff: 1
   hitSound: {fileID: 0}
 --- !u!61 &1272112798
 BoxCollider2D:
@@ -4683,9 +4719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  horKnockback: 0
   verKnockback: 25
-  liftOff: 1
   hitSound: {fileID: 0}
 --- !u!61 &1327338827
 BoxCollider2D:
@@ -4808,36 +4842,36 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_Poly:
     m_Paths:
-    - - {x: 4730.35254, y: -123.778984}
-      - {x: 4732.28516, y: 6.35287333}
-      - {x: 6403.82227, y: 2.11156082}
-      - {x: 6404.11377, y: -1277.47388}
-      - {x: 4987.94922, y: -1282.73242}
-      - {x: 4987.27441, y: -1149.73706}
-      - {x: 4861.75391, y: -1149.99878}
-      - {x: 4858.99365, y: -1021.19}
-      - {x: 4605.86523, y: -1026.17444}
+    - - {x: 4734.48145, y: -127.081825}
+      - {x: 4734.76221, y: -1.07851851}
+      - {x: 6398.86719, y: .460139662}
+      - {x: 6399.0752, y: -1278.81836}
+      - {x: 4991.43262, y: -1276.92603}
+      - {x: 4991.91895, y: -1149.73706}
+      - {x: 4864.07617, y: -1149.99878}
+      - {x: 4864.80029, y: -1021.19}
+      - {x: 4607.02637, y: -1022.69067}
       - {x: 4608.16553, y: -638.973267}
-      - {x: 4730.15283, y: -637.106079}
-      - {x: 4738.17432, y: -893.152832}
-      - {x: 4997.5708, y: -893.364929}
-      - {x: 4993.26758, y: -1016.18823}
-      - {x: 5118.70361, y: -1019.19794}
-      - {x: 5119.95752, y: -1144.10913}
-      - {x: 6136.40674, y: -1145.74683}
-      - {x: 6140.85791, y: -891.064453}
-      - {x: 6269.45557, y: -890.699768}
-      - {x: 6270.41943, y: -518.505249}
-      - {x: 6147.84082, y: -516.388672}
-      - {x: 6135.36914, y: -263.542053}
-      - {x: 5885.71777, y: -256.028046}
-      - {x: 5885.50488, y: -130.954987}
-      - {x: 4872.45947, y: -127.329491}
-      - {x: 4869.13379, y: -258.423218}
-      - {x: 4738.25293, y: -259.110321}
-      - {x: 4737.021, y: -386.096436}
-      - {x: 4602.97998, y: -382.971222}
-      - {x: 4604.17627, y: -124.742271}
+      - {x: 4734.79834, y: -639.428589}
+      - {x: 4733.5293, y: -895.475403}
+      - {x: 4990.60352, y: -898.009949}
+      - {x: 4990.94531, y: -1025.47839}
+      - {x: 5118.92627, y: -1024.30444}
+      - {x: 5119.77588, y: -1151.60938}
+      - {x: 6143.33789, y: -1152.67896}
+      - {x: 6142.59766, y: -897.15625}
+      - {x: 6271.19629, y: -895.921204}
+      - {x: 6271.24512, y: -510.248138}
+      - {x: 6144.53809, y: -510.608673}
+      - {x: 6142.7998, y: -254.459244}
+      - {x: 5889.8457, y: -254.376633}
+      - {x: 5887.98145, y: -127.65213}
+      - {x: 4861.72559, y: -127.329491}
+      - {x: 4860.87695, y: -253.468948}
+      - {x: 4734.12451, y: -254.98175}
+      - {x: 4736.19434, y: -382.79361}
+      - {x: 4607.93359, y: -383.796906}
+      - {x: 4609.12988, y: -127.219406}
 --- !u!1 &1340990453
 GameObject:
   m_ObjectHideFlags: 0
@@ -5003,20 +5037,20 @@ PolygonCollider2D:
     - - {x: -14.2652512, y: -.308513641}
       - {x: 633.079529, y: 4.05738354}
       - {x: 636.229736, y: -125.135338}
-      - {x: 1405.82654, y: -116.714096}
-      - {x: 1407.10986, y: -247.593658}
-      - {x: 1660.83484, y: -249.927444}
+      - {x: 1405.82642, y: -128.23761}
+      - {x: 1405.95728, y: -255.66011}
+      - {x: 1660.83496, y: -255.689194}
       - {x: 1660.51672, y: -382.932648}
       - {x: 268.2005, y: -383.336975}
-      - {x: 261.838348, y: -383.960358}
-      - {x: 260.909668, y: -513.928284}
+      - {x: 257.336426, y: -383.960327}
+      - {x: 257.908203, y: -506.424988}
       - {x: 125.50869, y: -509.19751}
-      - {x: 133.765793, y: -1141.28442}
-      - {x: 2680.48926, y: -1144.02515}
-      - {x: 2682.34326, y: -1017.73999}
-      - {x: 2813.83179, y: -1021.46729}
-      - {x: 2818.40356, y: -892.300781}
-      - {x: 2944.06812, y: -894.238159}
+      - {x: 127.763184, y: -1150.28833}
+      - {x: 2686.80029, y: -1150.0343}
+      - {x: 2686.84473, y: -1025.24329}
+      - {x: 2815.33252, y: -1022.96802}
+      - {x: 2815.40186, y: -895.302124}
+      - {x: 2944.06836, y: -895.738892}
       - {x: 2945.40869, y: -1154.11743}
       - {x: 2812.0332, y: -1152.25391}
       - {x: 2818.24805, y: -1156.67078}
@@ -6299,9 +6333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  horKnockback: 0
   verKnockback: 25
-  liftOff: 1
   hitSound: {fileID: 0}
 --- !u!61 &1830783268
 BoxCollider2D:
@@ -6464,9 +6496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  horKnockback: 0
   verKnockback: 25
-  liftOff: 1
   hitSound: {fileID: 0}
 --- !u!61 &1863106664
 BoxCollider2D:

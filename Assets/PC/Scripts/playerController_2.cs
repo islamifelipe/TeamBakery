@@ -14,6 +14,7 @@ public class playerController_2: MonoBehaviour {
 	public AudioClip changeWeaponSound, duckSound, jumpSound, fallSound, pauseSound, unPauseSound;
 	public AudioSource pauseMusic, gameMusic;
 	public Vector3 initialScale;
+	public groundUpdate jumpCheck;
 	private bool duck, jump;
 	private int intAux;
 	private float horSpeed, verSpeed, colliderCenter, colliderSize;
@@ -32,19 +33,12 @@ public class playerController_2: MonoBehaviour {
 	}
 	
 	// Checagem de colisao com o chao, para poder ativar o salto
-	void OnCollisionEnter2D(Collision2D col){
+	/*void OnCollisionEnter2D(Collision2D col){
 		if (col.gameObject.tag == "jumpSurface") {
 			jump = true;
 			//AudioSource.PlayClipAtPoint(fallSound, transform.position);
 		}
-	}
-	
-	void OnTriggerEnter2D(Collider2D col){
-		if (col.gameObject.tag == "jumpSurface") {
-			jump = true;
-			//AudioSource.PlayClipAtPoint(fallSound, transform.position);
-		}
-	}
+	}*/
 	
 	void updateWeapons(){
 		for(int i = 1; i < 10; i++){
@@ -175,18 +169,18 @@ public class playerController_2: MonoBehaviour {
 	void duckButton(){
 		if (Input.GetKey (KeyCode.DownArrow) && (
 			PCAnim.GetCurrentAnimatorStateInfo(0).IsName("Idle") ||
-			PCAnim.GetCurrentAnimatorStateInfo(0).IsName("Walking") ||
-			PCAnim.GetCurrentAnimatorStateInfo(0).IsName("Duck1") ||
-			PCAnim.GetCurrentAnimatorStateInfo(0).IsName("Duck2")
+			PCAnim.GetCurrentAnimatorStateInfo(0).IsName("Walk") ||
+			PCAnim.GetCurrentAnimatorStateInfo(0).IsName("Duck")
 			)) {
 			duck = true;
 			chefCollider.size = new Vector2 (chefCollider.size.x, colliderSize-(float)0.4);
 			chefCollider.center = new Vector2 (chefCollider.center.x, colliderCenter-(float)0.2);
-			if(!PCAnim.GetCurrentAnimatorStateInfo(0).IsName("Duck1") && !PCAnim.GetCurrentAnimatorStateInfo(0).IsName("Duck2")){
+			if(!PCAnim.GetCurrentAnimatorStateInfo(0).IsName("Duck")){
 				AudioSource.PlayClipAtPoint(duckSound, transform.position);
 			}
 		}
 		else {
+			duck = false;
 			chefCollider.size = new Vector2 (chefCollider.size.x, colliderSize);
 			chefCollider.center = new Vector2 (chefCollider.center.x, colliderCenter);
 		}
@@ -238,12 +232,11 @@ public class playerController_2: MonoBehaviour {
 	
 	void Update () {
 		updateWeapons (); //DEBUG APENAS. REMOVER APOS ADICIONAR ARMAS COLETADAS
-		duck = false;
 		horSpeed = rigidbody2D.velocity.x;
 		verSpeed = rigidbody2D.velocity.y;
 		// Ativa/desativa o collider do ataque
 		if(!attack) mainAttack.collider2D.enabled = false;
-		if (PCAnim.GetCurrentAnimatorStateInfo (0).IsName ("Idle")) attack = false;
+		if(PCAnim.GetCurrentAnimatorStateInfo (0).IsName ("Idle")) attack = false;
 		
 		pauseButton();
 		changeWeapon();
@@ -256,7 +249,7 @@ public class playerController_2: MonoBehaviour {
 		PCAnim.SetFloat ("horSpeed", Mathf.Abs(horSpeed));
 		PCAnim.SetBool ("duck", duck);
 		PCAnim.SetBool ("attack", attack);
-		PCAnim.SetBool ("jump", !jump);
+		PCAnim.SetBool ("jump", !jumpCheck.jump);
 		// Atualizaçao de velocidade
 		rigidbody2D.velocity = new Vector2 (horSpeed, verSpeed);
 	}

@@ -11,11 +11,8 @@ public class projInfo : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
-		print("RANGED TRIGGER!");
-		if (col.gameObject.tag == "Enemy") {
-			col.gameObject.GetComponent<enemyInfo>().health -= damage;
-			Destroy (this.gameObject);
-		}
+		if (col.gameObject.tag == "Enemy") col.gameObject.GetComponent<enemyInfo>().health -= damage;
+		if (col.gameObject.tag != "Player") Destroy(this.gameObject);
 	}
 	
 	// Update is called once per frame

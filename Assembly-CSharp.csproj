@@ -83,6 +83,7 @@
      <Compile Include="Assets\WeaponHUDControl.cs" />
      <Compile Include="Assets\cartMovement.cs" />
      <Compile Include="Assets\followCart.cs" />
+     <Compile Include="Assets\groundUpdate.cs" />
      <Compile Include="Assets\leverAction1.cs" />
      <Compile Include="Assets\leverAction2.cs" />
      <Compile Include="Assets\leverLift1.cs" />
