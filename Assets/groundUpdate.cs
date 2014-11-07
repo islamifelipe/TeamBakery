@@ -14,15 +14,7 @@ public class groundUpdate : MonoBehaviour {
 		}
 	}
 	
-	void OnTriggerExit2D(Collider2D col){
-		if (col.gameObject.tag == "jumpSurface") {
-			jump = false;
-			//AudioSource.PlayClipAtPoint(fallSound, transform.position);
-		}
-	}
-	
 	// Update is called once per frame
 	void Update () {
-	
 	}
 }

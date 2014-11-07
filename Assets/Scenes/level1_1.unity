@@ -266,7 +266,7 @@ GameObject:
   - 114: {fileID: 24642700}
   m_Layer: 0
   m_Name: attackCollision
-  m_TagString: Player1
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -633,7 +633,7 @@ GameObject:
   - 114: {fileID: 244589030}
   m_Layer: 0
   m_Name: groundCheck
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -869,6 +869,10 @@ Prefab:
       propertyPath: patrollRange
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: doughnutAnim
+      value: 
+      objectReference: {fileID: 1758640834}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
   m_RootGameObject: {fileID: 2046291717}
@@ -973,6 +977,10 @@ Prefab:
       propertyPath: patrollRange
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: doughnutAnim
+      value: 
+      objectReference: {fileID: 1471844505}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
   m_RootGameObject: {fileID: 769910352}
@@ -2423,7 +2431,7 @@ MonoBehaviour:
   maxVelocity: 3
   timeForIdle: 2
   timeAsIdle: 1
-  doughnutAnim: {fileID: 0}
+  doughnutAnim: {fileID: 1471844505}
 --- !u!114 &769910355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2924,7 +2932,7 @@ MonoBehaviour:
   maxVelocity: 3
   timeForIdle: 2
   timeAsIdle: 1
-  doughnutAnim: {fileID: 0}
+  doughnutAnim: {fileID: 1085070761}
 --- !u!114 &931070105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3764,7 +3772,7 @@ MonoBehaviour:
   maxVelocity: 3
   timeForIdle: 2
   timeAsIdle: 1
-  doughnutAnim: {fileID: 0}
+  doughnutAnim: {fileID: 931070109}
 --- !u!114 &1085070757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5118,7 +5126,7 @@ MonoBehaviour:
   maxVelocity: 3
   timeForIdle: 2
   timeAsIdle: 1
-  doughnutAnim: {fileID: 0}
+  doughnutAnim: {fileID: 769910359}
 --- !u!114 &1471844501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5327,6 +5335,10 @@ Prefab:
       propertyPath: patrollRange
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: doughnutAnim
+      value: 
+      objectReference: {fileID: 2046291724}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
   m_RootGameObject: {fileID: 1758640827}
@@ -6003,7 +6015,7 @@ MonoBehaviour:
   maxVelocity: 3
   timeForIdle: 2
   timeAsIdle: 1
-  doughnutAnim: {fileID: 0}
+  doughnutAnim: {fileID: 2046291724}
 --- !u!114 &1758640830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6212,6 +6224,10 @@ Prefab:
       propertyPath: patrollRange
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: doughnutAnim
+      value: 
+      objectReference: {fileID: 769910359}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
   m_RootGameObject: {fileID: 1471844498}
@@ -6998,6 +7014,10 @@ Prefab:
       propertyPath: patrollRange
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: doughnutAnim
+      value: 
+      objectReference: {fileID: 931070109}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
   m_RootGameObject: {fileID: 1085070755}
@@ -7106,6 +7126,10 @@ Prefab:
       propertyPath: patrollRange
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: doughnutAnim
+      value: 
+      objectReference: {fileID: 1085070761}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
   m_RootGameObject: {fileID: 931070102}
@@ -7226,7 +7250,7 @@ MonoBehaviour:
   maxVelocity: 3
   timeForIdle: 2
   timeAsIdle: 1
-  doughnutAnim: {fileID: 0}
+  doughnutAnim: {fileID: 1758640834}
 --- !u!114 &2046291720
 MonoBehaviour:
   m_ObjectHideFlags: 0

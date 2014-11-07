@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GameOver : MonoBehaviour {
 	public string stage;
-
+	public Texture replayT, selectT;
 
 	// Use this for initialization
 	void Start () {	
@@ -19,10 +19,10 @@ public class GameOver : MonoBehaviour {
 			Application.LoadLevel("MenuInicial");		
 		}
 		*/
-		if (GUI.Button (new Rect (425, 290, 80, 80), "Fases")) {
+		if (GUI.Button (new Rect (425, 290, 80, 80), selectT)) {
 			Application.LoadLevel("Fases");	
 		}
-		if (GUI.Button (new Rect (565, 290, 80, 80), "Jogar novamente")) {
+		if (GUI.Button (new Rect (565, 290, 80, 80), replayT)) {
 			
 			int LIndex = GameObject.Find("PreviousStageInfo").GetComponent<StageControl>().LastIndex;
 		

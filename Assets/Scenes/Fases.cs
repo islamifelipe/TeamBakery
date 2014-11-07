@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class Fases : MonoBehaviour {
-
+	public Texture returnT, level1T;
+	
 	// Use this for initialization
 	void Start () {
 	
@@ -14,10 +15,10 @@ public class Fases : MonoBehaviour {
 	}
 
 	void OnGUI(){
-		if (GUI.Button (new Rect (350, 470, 60, 60), "Voltar")) {
+		if (GUI.Button (new Rect (350, 470, 60, 60), returnT)) {
 			Application.LoadLevel("MenuInicial");
 		}
-		if (GUI.Button (new Rect (280, 210, 80, 90), "Fase 1")) {
+		if (GUI.Button (new Rect (280, 210, 80, 90), level1T)) {
 			Application.LoadLevel("level1_1");		
 			//Nao esqueça de clicar na cena da fase 1, ir ate file>>Build Setting e add current cena
 		}
