@@ -14,13 +14,15 @@ public class GameOver : MonoBehaviour {
 	}
 
 	void OnGUI(){
+		/*
 		if (GUI.Button (new Rect (80, 140, 100, 50), "Menu Inicial")) {
 			Application.LoadLevel("MenuInicial");		
 		}
-		if (GUI.Button (new Rect (180, 140, 100, 50), "Fases")) {
+		*/
+		if (GUI.Button (new Rect (425, 290, 80, 80), "Fases")) {
 			Application.LoadLevel("Fases");	
 		}
-		if (GUI.Button (new Rect (280, 140, 150, 50), "Jogar novamente")) {
+		if (GUI.Button (new Rect (565, 290, 80, 80), "Jogar novamente")) {
 			
 			int LIndex = GameObject.Find("PreviousStageInfo").GetComponent<StageControl>().LastIndex;
 		

@@ -223,15 +223,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddc3510033e306c4d922872e10591e87, type: 3}
+  m_Script: {fileID: 11500000, guid: 394de941ac5466e469a052b63fc02749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrollRange: 10
+  patrollRange: 0
   Right: 0
-  maxVelocity: 10
-  timeForIdle: 10
-  timeAsIdle: 3
-  doughnutAnim: {fileID: 9500000}
+  maxVelocity: 0
+  timeForIdle: 0
+  timeAsIdle: 0
+  doughnutAnim: {fileID: 0}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -240,14 +240,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfe633058fed7294caa967239eebae84, type: 3}
+  m_Script: {fileID: 11500000, guid: 77c2257ecdef41f4c8f2b8fd5b934d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sightView: 5
-  sightHeight: 1
+  sightView: 0
+  sightHeight: 0
   playerInSight: 0
-  BegginingPoint: {fileID: 400004}
-  EndingPoint: {fileID: 400006}
+  BegginingPoint: {fileID: 0}
+  EndingPoint: {fileID: 0}
   Player: {fileID: 0}
   Player1: {fileID: 0}
 --- !u!114 &11400006

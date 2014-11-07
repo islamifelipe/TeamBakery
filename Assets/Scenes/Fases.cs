@@ -14,13 +14,14 @@ public class Fases : MonoBehaviour {
 	}
 
 	void OnGUI(){
-		if (GUI.Button (new Rect (40, 40, 60, 40), "Voltar")) {
+		if (GUI.Button (new Rect (350, 470, 60, 60), "Voltar")) {
 			Application.LoadLevel("MenuInicial");
 		}
-		if (GUI.Button (new Rect (80, 100, 80, 50), "Fase 1")) {
+		if (GUI.Button (new Rect (280, 210, 80, 90), "Fase 1")) {
 			Application.LoadLevel("level1_1");		
 			//Nao esqueça de clicar na cena da fase 1, ir ate file>>Build Setting e add current cena
 		}
+		/*
 		if (GUI.Button (new Rect (240, 100, 80, 50), "Fase 2")) {
 			//Application.LoadLevel("Fase 2");	
 			// idem
@@ -33,5 +34,6 @@ public class Fases : MonoBehaviour {
 			//Application.LoadLevel("Fase 4");
 			// idem
 		}
+		*/
 	}
 }

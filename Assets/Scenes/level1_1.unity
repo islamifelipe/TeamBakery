@@ -865,6 +865,10 @@ Prefab:
       propertyPath: weaponDamage.Array.data[9]
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: patrollRange
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
   m_RootGameObject: {fileID: 2046291717}
@@ -964,6 +968,10 @@ Prefab:
     - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
       propertyPath: weaponDamage.Array.data[9]
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: patrollRange
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
@@ -2407,15 +2415,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 769910352}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddc3510033e306c4d922872e10591e87, type: 3}
+  m_Script: {fileID: 11500000, guid: 394de941ac5466e469a052b63fc02749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrollRange: 10
+  patrollRange: 2
   Right: 0
   maxVelocity: 3
   timeForIdle: 2
   timeAsIdle: 1
-  doughnutAnim: {fileID: 769910359}
+  doughnutAnim: {fileID: 0}
 --- !u!114 &769910355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2425,14 +2433,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 769910352}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfe633058fed7294caa967239eebae84, type: 3}
+  m_Script: {fileID: 11500000, guid: 77c2257ecdef41f4c8f2b8fd5b934d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sightView: 5
-  sightHeight: 1
+  sightView: 0
+  sightHeight: 0
   playerInSight: 0
-  BegginingPoint: {fileID: 437766657}
-  EndingPoint: {fileID: 379383544}
+  BegginingPoint: {fileID: 0}
+  EndingPoint: {fileID: 0}
   Player: {fileID: 0}
   Player1: {fileID: 0}
 --- !u!114 &769910356
@@ -2908,15 +2916,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 931070102}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddc3510033e306c4d922872e10591e87, type: 3}
+  m_Script: {fileID: 11500000, guid: 394de941ac5466e469a052b63fc02749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrollRange: 10
+  patrollRange: 2
   Right: 1
   maxVelocity: 3
   timeForIdle: 2
   timeAsIdle: 1
-  doughnutAnim: {fileID: 931070109}
+  doughnutAnim: {fileID: 0}
 --- !u!114 &931070105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2926,14 +2934,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 931070102}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfe633058fed7294caa967239eebae84, type: 3}
+  m_Script: {fileID: 11500000, guid: 77c2257ecdef41f4c8f2b8fd5b934d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sightView: 5
-  sightHeight: 1
+  sightView: 0
+  sightHeight: 0
   playerInSight: 0
-  BegginingPoint: {fileID: 579876025}
-  EndingPoint: {fileID: 332731051}
+  BegginingPoint: {fileID: 0}
+  EndingPoint: {fileID: 0}
   Player: {fileID: 0}
   Player1: {fileID: 0}
 --- !u!114 &931070106
@@ -3748,15 +3756,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1085070755}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddc3510033e306c4d922872e10591e87, type: 3}
+  m_Script: {fileID: 11500000, guid: 394de941ac5466e469a052b63fc02749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrollRange: 10
+  patrollRange: 2
   Right: 1
   maxVelocity: 3
   timeForIdle: 2
   timeAsIdle: 1
-  doughnutAnim: {fileID: 1085070761}
+  doughnutAnim: {fileID: 0}
 --- !u!114 &1085070757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3766,14 +3774,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1085070755}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfe633058fed7294caa967239eebae84, type: 3}
+  m_Script: {fileID: 11500000, guid: 77c2257ecdef41f4c8f2b8fd5b934d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sightView: 5
-  sightHeight: 1
+  sightView: 0
+  sightHeight: 0
   playerInSight: 0
-  BegginingPoint: {fileID: 488339827}
-  EndingPoint: {fileID: 1887041144}
+  BegginingPoint: {fileID: 0}
+  EndingPoint: {fileID: 0}
   Player: {fileID: 0}
   Player1: {fileID: 0}
 --- !u!114 &1085070758
@@ -5102,15 +5110,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1471844498}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddc3510033e306c4d922872e10591e87, type: 3}
+  m_Script: {fileID: 11500000, guid: 394de941ac5466e469a052b63fc02749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrollRange: 10
+  patrollRange: 2
   Right: 1
   maxVelocity: 3
   timeForIdle: 2
   timeAsIdle: 1
-  doughnutAnim: {fileID: 1471844505}
+  doughnutAnim: {fileID: 0}
 --- !u!114 &1471844501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5120,14 +5128,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1471844498}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfe633058fed7294caa967239eebae84, type: 3}
+  m_Script: {fileID: 11500000, guid: 77c2257ecdef41f4c8f2b8fd5b934d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sightView: 5
-  sightHeight: 1
+  sightView: 0
+  sightHeight: 0
   playerInSight: 0
-  BegginingPoint: {fileID: 1802798408}
-  EndingPoint: {fileID: 1657046869}
+  BegginingPoint: {fileID: 0}
+  EndingPoint: {fileID: 0}
   Player: {fileID: 0}
   Player1: {fileID: 0}
 --- !u!114 &1471844502
@@ -5314,6 +5322,10 @@ Prefab:
     - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
       propertyPath: weaponDamage.Array.data[9]
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: patrollRange
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
@@ -5983,15 +5995,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1758640827}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddc3510033e306c4d922872e10591e87, type: 3}
+  m_Script: {fileID: 11500000, guid: 394de941ac5466e469a052b63fc02749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrollRange: 10
+  patrollRange: 2
   Right: 1
   maxVelocity: 3
   timeForIdle: 2
   timeAsIdle: 1
-  doughnutAnim: {fileID: 1758640834}
+  doughnutAnim: {fileID: 0}
 --- !u!114 &1758640830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6001,14 +6013,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1758640827}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfe633058fed7294caa967239eebae84, type: 3}
+  m_Script: {fileID: 11500000, guid: 77c2257ecdef41f4c8f2b8fd5b934d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sightView: 5
-  sightHeight: 1
+  sightView: 0
+  sightHeight: 0
   playerInSight: 0
-  BegginingPoint: {fileID: 42484624}
-  EndingPoint: {fileID: 903557643}
+  BegginingPoint: {fileID: 0}
+  EndingPoint: {fileID: 0}
   Player: {fileID: 0}
   Player1: {fileID: 0}
 --- !u!114 &1758640831
@@ -6195,6 +6207,10 @@ Prefab:
     - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
       propertyPath: weaponDamage.Array.data[9]
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: patrollRange
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
@@ -6978,6 +6994,10 @@ Prefab:
       propertyPath: weaponDamage.Array.data[9]
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: patrollRange
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
   m_RootGameObject: {fileID: 1085070755}
@@ -7081,6 +7101,10 @@ Prefab:
     - target: {fileID: 11400006, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
       propertyPath: weaponDamage.Array.data[9]
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
+      propertyPath: patrollRange
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a520be1640624f47ae36f68f37ecd36, type: 2}
@@ -7194,15 +7218,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2046291717}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddc3510033e306c4d922872e10591e87, type: 3}
+  m_Script: {fileID: 11500000, guid: 394de941ac5466e469a052b63fc02749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrollRange: 10
+  patrollRange: 2
   Right: 1
   maxVelocity: 3
   timeForIdle: 2
   timeAsIdle: 1
-  doughnutAnim: {fileID: 2046291724}
+  doughnutAnim: {fileID: 0}
 --- !u!114 &2046291720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7212,14 +7236,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2046291717}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfe633058fed7294caa967239eebae84, type: 3}
+  m_Script: {fileID: 11500000, guid: 77c2257ecdef41f4c8f2b8fd5b934d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sightView: 5
-  sightHeight: 1
+  sightView: 0
+  sightHeight: 0
   playerInSight: 0
-  BegginingPoint: {fileID: 2060115626}
-  EndingPoint: {fileID: 1333942993}
+  BegginingPoint: {fileID: 0}
+  EndingPoint: {fileID: 0}
   Player: {fileID: 0}
   Player1: {fileID: 0}
 --- !u!114 &2046291721
