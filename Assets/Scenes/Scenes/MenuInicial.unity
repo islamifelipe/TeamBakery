@@ -177,6 +177,7 @@ GameObject:
   - 124: {fileID: 1757655850}
   - 81: {fileID: 1757655849}
   - 114: {fileID: 1757655854}
+  - 114: {fileID: 1757655855}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -255,7 +256,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1757655848}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31b08f250a61d3a4088ba318bffaba37, type: 3}
   m_Name: 
@@ -264,3 +265,20 @@ MonoBehaviour:
   optionT: {fileID: 2800000, guid: 6d470725616e56e4ab11b99df90825fe, type: 3}
   credT: {fileID: 2800000, guid: 0f217ed2d6d01a94981ecc0db7f6b145, type: 3}
   tutorialT: {fileID: 2800000, guid: ec906b348c7f1174583ed458de27b311, type: 3}
+  sizeX: 150
+  sizeY: 150
+--- !u!114 &1757655855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1757655848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 816f7c4799a8131448089215a5d41a96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  b1: {fileID: 100000, guid: 7a731b1557c288141a3a63be0461f518, type: 2}
+  b2: {fileID: 0}
+  b3: {fileID: 0}
+  b4: {fileID: 0}

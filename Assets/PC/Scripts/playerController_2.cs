@@ -2,23 +2,24 @@
 using System.Collections;
 
 public class playerController_2: MonoBehaviour {	
-	
 	public bool attack;
 	public bool[] weaponAvail = new bool[10];
 	public int[] weaponDamage = new int[10];
 	public int weaponChoice, lastWeaponChoice;
 	public float maxHorSpeed, jumpStrenght, sprintBonus, maxSprintSpeed, sprintFadeSpeed, bounceTest, horDeacc, horAcc, shakeIntensity, attackDelay, attackTimer;
 	public Animator PCAnim;
-	public GameObject mainAttack, weaponHud;
+	public GameObject mainAttack, weaponHud, b1, b2;
 	public GameObject[] weaponIcon = new GameObject[10];
 	public AudioClip changeWeaponSound, duckSound, jumpSound, fallSound, pauseSound, unPauseSound;
 	public AudioSource pauseMusic, gameMusic;
 	public Vector3 initialScale;
 	public groundUpdate jumpCheck;
+	
 	private bool duck, jump;
 	private int intAux;
 	private float horSpeed, verSpeed, colliderCenter, colliderSize;
-	private BoxCollider2D chefCollider;
+	private BoxCollider2D chefCollider;	
+	private GameObject mb1, mb2;
 	
 	void Start(){	
 		attack = false;
@@ -31,15 +32,7 @@ public class playerController_2: MonoBehaviour {
 		lastWeaponChoice = 1;
 		updateWeapons();
 	}
-	
-	// Checagem de colisao com o chao, para poder ativar o salto
-	/*void OnCollisionEnter2D(Collision2D col){
-		if (col.gameObject.tag == "jumpSurface") {
-			jump = true;
-			//AudioSource.PlayClipAtPoint(fallSound, transform.position);
-		}
-	}*/
-	
+		
 	void updateWeapons(){
 		for(int i = 1; i < 10; i++){
 			if(weaponAvail[i]) weaponIcon[i].GetComponent<weaponIcon>().setActive();
@@ -51,14 +44,18 @@ public class playerController_2: MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.P)) {
 			if(Time.timeScale == 0){
 				Time.timeScale = 1;
+				Destroy(mb1);
+				Destroy(mb2);
 				pauseMusic.Pause();
 				gameMusic.Play();
 				AudioSource.PlayClipAtPoint(unPauseSound, transform.position);
 			}
-			else{
+			else{				
 				AudioSource.PlayClipAtPoint(unPauseSound, transform.position);
 				pauseMusic.PlayDelayed(1);
 				gameMusic.Pause();
+				mb1 = (GameObject) Instantiate(b1, new Vector3(transform.position.x, transform.position.y-3,-5), Quaternion.identity);
+				mb2 = (GameObject) Instantiate(b2, new Vector3(transform.position.x, transform.position.y+3,-5), Quaternion.identity);
 				Time.timeScale = 0;
 			}
 		}

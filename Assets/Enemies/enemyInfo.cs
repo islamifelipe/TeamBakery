@@ -14,7 +14,7 @@ public class enemyInfo : MonoBehaviour {
 		if(col.gameObject.tag == "Player"){
 			AudioSource.PlayClipAtPoint(hitSound, transform.position);
 			col.gameObject.GetComponent<PCInfo>().health -= damage;
-
+			
 			if(col.gameObject.transform.position.x < this.transform.position.x){
 				col.gameObject.transform.position = new Vector2(col.gameObject.transform.position.x-liftOff, col.gameObject.transform.position.y+liftOff);
 				col.gameObject.rigidbody2D.velocity = new Vector2(-horKnockback, verKnockback);
@@ -23,9 +23,6 @@ public class enemyInfo : MonoBehaviour {
 				col.gameObject.transform.position = new Vector2(col.gameObject.transform.position.x+liftOff, col.gameObject.transform.position.y+liftOff);
 				col.gameObject.rigidbody2D.velocity = new Vector2(horKnockback, verKnockback);
 			}
-
-
-			print ("OUCH");
 		}
 	}
 	

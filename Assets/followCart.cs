@@ -10,6 +10,6 @@ public class followCart : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.transform.position = new Vector3(cart.transform.position.x+(float)3, cart.transform.position.y+(float)1, this.transform.position.z);
+		this.transform.position = new Vector3(cart.transform.position.x+(float)3, this.transform.position.y, this.transform.position.z);
 	}
 }

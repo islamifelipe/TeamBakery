@@ -10,19 +10,16 @@ public class StageControl : MonoBehaviour {
 	}
 	
 	void Awake(){
-		DontDestroyOnLoad(this);
-	
+		DontDestroyOnLoad(this);	
 	}
 	
-	void OnLevelWasLoaded(int level){
+	void OnLevelWasLoaded(int level){		
 		if(Application.loadedLevelName != "GameOver"){
 			LastIndex = Application.loadedLevel;
-		}
-	
+		}	
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	void Update () {	
 	}
 }
