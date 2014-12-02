@@ -4,8 +4,7 @@ using System.Collections;
 public class mmPlay : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
-		
+	void Start () {		
 	}
 	
 	void OnMouseDown(){
@@ -13,7 +12,6 @@ public class mmPlay : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	void Update () {	
 	}
 }
