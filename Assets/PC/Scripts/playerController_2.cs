@@ -3,20 +3,18 @@ using System.Collections;
 
 public class playerController_2: MonoBehaviour {	
 	public bool attack;
-	public bool[] weaponAvail = new bool[10];
-	public int[] weaponDamage = new int[10];
-	public int weaponChoice, lastWeaponChoice;
+	public bool[] weaponAvail = new bool[3];
+	public int[] weaponDamage = new int[3];
+	public int weaponChoice;
 	public float maxHorSpeed, jumpStrenght, sprintBonus, maxSprintSpeed, sprintFadeSpeed, bounceTest, horDeacc, horAcc, shakeIntensity, attackDelay, attackTimer;
 	public Animator PCAnim;
-	public GameObject mainAttack, weaponHud, b1, b2;
-	public GameObject[] weaponIcon = new GameObject[10];
+	public GameObject mainAttack, b1, b2, weaponIcon;
 	public AudioClip changeWeaponSound, duckSound, jumpSound, fallSound, pauseSound, unPauseSound;
 	public AudioSource pauseMusic, gameMusic;
 	public Vector3 initialScale;
 	public groundUpdate jumpCheck;
 	
 	private bool duck, jump;
-	private int intAux;
 	private float horSpeed, verSpeed, colliderCenter, colliderSize;
 	private BoxCollider2D chefCollider;	
 	private GameObject mb1, mb2;
@@ -29,19 +27,11 @@ public class playerController_2: MonoBehaviour {
 		colliderSize = chefCollider.size.y;
 		colliderCenter = chefCollider.center.y;
 		weaponChoice = 1;
-		lastWeaponChoice = 1;
-		updateWeapons();
-	}
-		
-	void updateWeapons(){
-		for(int i = 1; i < 10; i++){
-			if(weaponAvail[i]) weaponIcon[i].GetComponent<weaponIcon>().setActive();
-			else weaponIcon[i].GetComponent<weaponIcon>().setInactive();
-		}
+		Time.timeScale = 1;
 	}
 	
 	void pauseButton(){
-		if (Input.GetKeyDown (KeyCode.P)) {
+		if (Input.GetButtonDown("Pause")) {
 			if(Time.timeScale == 0){
 				Time.timeScale = 1;
 				Destroy(mb1);
@@ -62,109 +52,28 @@ public class playerController_2: MonoBehaviour {
 	}
 	
 	void changeWeapon(){
-		if (Input.GetKeyDown(KeyCode.Q) && weaponAvail[lastWeaponChoice]) {
-			AudioSource.PlayClipAtPoint(changeWeaponSound, transform.position);
-			intAux = weaponChoice;
-			weaponChoice = lastWeaponChoice;
-			lastWeaponChoice = intAux;
-			// Show/hide weapon hud
-			weaponHud.GetComponent<WeaponHUDControl>().showHud(weaponChoice);
-		}
-		// Trocar para a arma de ID inferior
-		if( Input.GetKeyDown(KeyCode.F)){
+		if(Input.GetButtonDown("Swap Left") && Time.timeScale == 1){
 			intAux = weaponChoice;
 			do{
 				weaponChoice--;
-				if(weaponChoice < 1) weaponChoice = 9;	
+				if(weaponChoice < 1) weaponChoice = 3;
+				weaponIcon.GetComponent<changeWeapon>().swapRight();
 			} while(!weaponAvail[weaponChoice]);
-			if(weaponChoice != intAux){
-				AudioSource.PlayClipAtPoint(changeWeaponSound, transform.position);
-				lastWeaponChoice = intAux;
-			}
-			// Show/hide weapon hud
-			weaponHud.GetComponent<WeaponHUDControl>().showHud(weaponChoice);
+			AudioSource.PlayClipAtPoint(changeWeaponSound, transform.position);
 		}
-		// Trocar para a arma de ID superior
-		if( Input.GetKeyDown(KeyCode.G)){
+		if(Input.GetButtonDown("Swap Right") && Time.timeScale == 1){
 			intAux = weaponChoice;
 			do{
 				weaponChoice++;
-				if(weaponChoice > 9) weaponChoice = 1;	
+				if(weaponChoice > 9) weaponChoice = 3;
+				weaponIcon.GetComponent<changeWeapon>().swapLeft();
 			} while(!weaponAvail[weaponChoice]);
-			if(weaponChoice != intAux){
-				AudioSource.PlayClipAtPoint(changeWeaponSound, transform.position);
-				lastWeaponChoice = intAux;
-			}
-			// Show/hide weapon hud
-			weaponHud.GetComponent<WeaponHUDControl>().showHud(weaponChoice);
-		}
-		if( Input.GetKeyDown(KeyCode.Alpha1) && weaponAvail[1] && weaponChoice != 1){
 			AudioSource.PlayClipAtPoint(changeWeaponSound, transform.position);
-			lastWeaponChoice = weaponChoice;
-			weaponChoice = 1;
-			// Show/hide weapon hud
-			weaponHud.GetComponent<WeaponHUDControl>().showHud(weaponChoice);
-		}
-		if( Input.GetKeyDown(KeyCode.Alpha2) && weaponAvail[2] && weaponChoice != 2){
-			AudioSource.PlayClipAtPoint(changeWeaponSound, transform.position);
-			lastWeaponChoice = weaponChoice;
-			weaponChoice = 2;
-			// Show/hide weapon hud
-			weaponHud.GetComponent<WeaponHUDControl>().showHud(weaponChoice);
-		}
-		if( Input.GetKeyDown(KeyCode.Alpha3) && weaponAvail[3] && weaponChoice != 3){
-			AudioSource.PlayClipAtPoint(changeWeaponSound, transform.position);
-			lastWeaponChoice = weaponChoice;
-			weaponChoice = 3;
-			// Show/hide weapon hud
-			weaponHud.GetComponent<WeaponHUDControl>().showHud(weaponChoice);
-		}
-		if( Input.GetKeyDown(KeyCode.Alpha4) && weaponAvail[4] && weaponChoice != 4){
-			AudioSource.PlayClipAtPoint(changeWeaponSound, transform.position);
-			lastWeaponChoice = weaponChoice;
-			weaponChoice = 4;
-			// Show/hide weapon hud
-			weaponHud.GetComponent<WeaponHUDControl>().showHud(weaponChoice);
-		}
-		if( Input.GetKeyDown(KeyCode.Alpha5) && weaponAvail[5] && weaponChoice != 5){
-			AudioSource.PlayClipAtPoint(changeWeaponSound, transform.position);
-			lastWeaponChoice = weaponChoice;
-			weaponChoice = 5;
-			// Show/hide weapon hud
-			weaponHud.GetComponent<WeaponHUDControl>().showHud(weaponChoice);
-		}
-		if( Input.GetKeyDown(KeyCode.Alpha6) && weaponAvail[6] && weaponChoice != 6){
-			AudioSource.PlayClipAtPoint(changeWeaponSound, transform.position);
-			lastWeaponChoice = weaponChoice;
-			weaponChoice = 6;
-			// Show/hide weapon hud
-			weaponHud.GetComponent<WeaponHUDControl>().showHud(weaponChoice);
-		}
-		if( Input.GetKeyDown(KeyCode.Alpha7) && weaponAvail[7] && weaponChoice != 7){
-			AudioSource.PlayClipAtPoint(changeWeaponSound, transform.position);
-			lastWeaponChoice = weaponChoice;
-			weaponChoice = 7;
-			// Show/hide weapon hud
-			weaponHud.GetComponent<WeaponHUDControl>().showHud(weaponChoice);
-		}
-		if( Input.GetKeyDown(KeyCode.Alpha8) && weaponAvail[8] && weaponChoice != 8){
-			AudioSource.PlayClipAtPoint(changeWeaponSound, transform.position);
-			lastWeaponChoice = weaponChoice;
-			weaponChoice = 8;
-			// Show/hide weapon hud
-			weaponHud.GetComponent<WeaponHUDControl>().showHud(weaponChoice);
-		}
-		if( Input.GetKeyDown(KeyCode.Alpha9) && weaponAvail[9] && weaponChoice != 9){
-			AudioSource.PlayClipAtPoint(changeWeaponSound, transform.position);
-			lastWeaponChoice = weaponChoice;
-			weaponChoice = 9;
-			// Show/hide weapon hud
-			weaponHud.GetComponent<WeaponHUDControl>().showHud(weaponChoice);
 		}
 	}
 	
 	void duckButton(){
-		if (Input.GetKey (KeyCode.DownArrow) && (
+		if (Input.GetButton("Duck")  && Time.timeScale == 1 && (
 			PCAnim.GetCurrentAnimatorStateInfo(0).IsName("Idle") ||
 			PCAnim.GetCurrentAnimatorStateInfo(0).IsName("Walk") ||
 			PCAnim.GetCurrentAnimatorStateInfo(0).IsName("Duck")
@@ -184,7 +93,7 @@ public class playerController_2: MonoBehaviour {
 	}
 	
 	void attackButton(){
-		if (Input.GetAxis ("Attack") > 0 && !duck && attackTimer <= 0f && (
+		if (Input.GetButtonDown("MainWeapon")  && Time.timeScale == 1 && !duck && attackTimer <= 0f && (
 			PCAnim.GetCurrentAnimatorStateInfo (0).IsName ("Idle") ||
 			PCAnim.GetCurrentAnimatorStateInfo (0).IsName ("Walk")
 			)) {
@@ -198,7 +107,7 @@ public class playerController_2: MonoBehaviour {
 	}
 	
 	void horizontalMovement(){
-		if(Input.GetAxis("Horizontal") > 0 && !duck){
+		if(Input.GetAxisRaw("Horizontal") > 0  && Time.timeScale == 1 && !duck){
 			horSpeed += horAcc;
 			if(horSpeed > maxHorSpeed) horSpeed -= sprintFadeSpeed;
 			if(Input.GetKey(KeyCode.LeftShift)){
@@ -208,7 +117,7 @@ public class playerController_2: MonoBehaviour {
 			transform.localScale = initialScale;
 		}
 		// Andar para a esquerda
-		else if(Input.GetAxis("Horizontal") < 0 && !duck){
+		else if(Input.GetAxisRaw("Horizontal") < 0  && Time.timeScale == 1 && !duck){
 			horSpeed -= horAcc;
 			if(horSpeed < -maxHorSpeed) horSpeed += sprintFadeSpeed;
 			if(Input.GetKey(KeyCode.LeftShift)){
@@ -220,7 +129,7 @@ public class playerController_2: MonoBehaviour {
 	}
 	
 	void jumpButton(){
-		if(Input.GetAxis("Jump") > 0 && !duck && jumpCheck.jump){
+		if(Input.GetButtonDown("Jump")  && Time.timeScale == 1 && !duck && jumpCheck.jump){
 			AudioSource.PlayClipAtPoint(jumpSound, transform.position);
 			jumpCheck.jump = false;
 			verSpeed = jumpStrenght;
@@ -228,7 +137,6 @@ public class playerController_2: MonoBehaviour {
 	}
 	
 	void Update () {
-		updateWeapons (); //DEBUG APENAS. REMOVER APOS ADICIONAR ARMAS COLETADAS
 		horSpeed = rigidbody2D.velocity.x;
 		verSpeed = rigidbody2D.velocity.y;
 		// Ativa/desativa o collider do ataque

@@ -5,6 +5,7 @@ public class enemyInfo : MonoBehaviour {
 	public int health, damage, horKnockback, verKnockback, liftOff;
 	public int[] weaponDamage = new int[10];
 	public AudioClip hitSound;
+	public int direction;
 
 	// Use this for initialization
 	void Start () {

@@ -13,6 +13,7 @@ public class doughnutIA2 : MonoBehaviour {
 	public Animator doughnutAnim;
 	private enemySight MySight;
 	private GameObject Player;
+	
 	public enum doughnutStates{
 		Patrolling = 0,
 		Iddle = 1,
@@ -23,19 +24,17 @@ public class doughnutIA2 : MonoBehaviour {
 
 	//private doughnutStates currentState;
 	//public doughnutStates initialState;
-
 	private IEnumerator idleTime(){
 		canMove = false;
 		yield return new WaitForSeconds (timeAsIdle);
 		canMove = true;
 	}
 
-
 	void Awake(){
 		MySight = GetComponent<enemySight> ();
 		Player = GameObject.FindGameObjectWithTag ("Player");
 	}
-
+	
 	void Start () {
 		// Guardar posiçao inicial
 		originalPosition = transform.localPosition;
@@ -56,16 +55,12 @@ public class doughnutIA2 : MonoBehaviour {
 		originalScale = transform.localScale;
 
 		Right = true;
+		this.GetComponent<enemyInfo>().direction = 1;
 		canMove = true;
 	}//Start()
-
-	void OnTriggerEnter(Collider one){
-		
-	}
-
-	// Update is called once per frame.
-	void Update() {
 	
+	// Update is called once per frame.
+	void Update() {	
 		doughnutAnim.SetFloat("Velocity", 0);
 		//Analisa se ja e tempo de ficar idle, se for poe em idle.
 
@@ -95,11 +90,13 @@ public class doughnutIA2 : MonoBehaviour {
 				transform.localScale = originalScale;
 			}else if (transform.localPosition.x > leftLimit && canMove == true) {
 				Right = false;	
+				this.GetComponent<enemyInfo>().direction = -1;	
 				transform.localScale = new Vector3(originalScale.x*-1, originalScale.y, originalScale.z);
 				rigidbody2D.velocity = new Vector2(maxVelocity *(-1), rigidbody2D.velocity.y);
 				doughnutAnim.SetFloat("Velocity", maxVelocity);
 			}else if(canMove == true){
-				Right = true;		
+				Right = true;
+				this.GetComponent<enemyInfo>().direction = 1;	
 			}
 		
 		}

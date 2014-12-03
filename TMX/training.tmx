@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="10" tilewidth="128" tileheight="128">
+ <tileset firstgid="1" name="DarkGrey_Box128x128" tilewidth="128" tileheight="128">
+  <image source="../Assets/2D Dev Sprites/DarkGrey/DarkGrey_Box128x128.png" width="128" height="128"/>
+ </tileset>
+ <layer name="Camada de Tiles 1" width="20" height="10">
+  <data encoding="base64" compression="zlib">
+   eJxjZGBgYKQyphYYNW/UPHLMoyYGAFsQADk=
+  </data>
+ </layer>
+</map>

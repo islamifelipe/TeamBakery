@@ -100,7 +100,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 247580955}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c377ad4f42b1a340919623493f54803, type: 3}
+  m_Script: {fileID: 11500000, guid: 14aef6acccadcf847884f0662c29d4ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &247580957
@@ -419,9 +419,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1022961113}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a5e22f95c53b04499be6498e2f3e3b, type: 3}
+  m_Script: {fileID: 11500000, guid: 99b758c4fbe853147bb3a729675968d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  click: {fileID: 8300000, guid: 36f2a32012b25db4f851e13c90016e0d, type: 3}
 --- !u!61 &1022961115
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -495,7 +496,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1216005531}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8d290b2c160165479a21dfa78dd8dd1, type: 3}
+  m_Script: {fileID: 11500000, guid: 98b03ce6054559e44ba7adef765ba0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &1216005533
@@ -588,6 +589,7 @@ GameObject:
   - 92: {fileID: 1757655851}
   - 124: {fileID: 1757655850}
   - 81: {fileID: 1757655849}
+  - 82: {fileID: 1757655854}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -660,6 +662,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!82 &1757655854
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1757655848}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: b4599f5569dabd94bbc0a08caab247a8, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &1868028628
 Prefab:
   m_ObjectHideFlags: 0
@@ -740,7 +800,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1962099834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6870117f2c381a49a0a31788968b9b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 0be5aeab686ea474d9dec9c3ddc5461d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &1962099836
