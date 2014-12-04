@@ -53,7 +53,6 @@ public class playerController_2: MonoBehaviour {
 	
 	void changeWeapon(){
 		if(Input.GetButtonDown("Swap Left") && Time.timeScale == 1){
-			intAux = weaponChoice;
 			do{
 				weaponChoice--;
 				if(weaponChoice < 1) weaponChoice = 3;
@@ -62,7 +61,6 @@ public class playerController_2: MonoBehaviour {
 			AudioSource.PlayClipAtPoint(changeWeaponSound, transform.position);
 		}
 		if(Input.GetButtonDown("Swap Right") && Time.timeScale == 1){
-			intAux = weaponChoice;
 			do{
 				weaponChoice++;
 				if(weaponChoice > 9) weaponChoice = 3;
